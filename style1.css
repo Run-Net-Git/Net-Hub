@@ -1,0 +1,432 @@
+@import url("https://fonts.googleapis.com/css2?family=Kantumruy+Pro:wght@400;500;600;700&display=swap");
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Variable សម្រាប់ Dark / Light Mode */
+body.dark-theme {
+  --bg-color: #0f172a;
+  --card-bg: #ffffff;
+  --text-color: #0f172a;
+  --btn-bg: #f8fafc;
+  --btn-text: #334155;
+  --btn-border: #e2e8f0;
+}
+
+body.light-theme {
+  --bg-color: #f1f5f9;
+  --card-bg: #ffffff;
+  --text-color: #0f172a;
+  --btn-bg: #ffffff;
+  --btn-text: #1e293b;
+  --btn-border: #cbd5e1;
+}
+
+body {
+  font-family: "Kantumruy Pro", sans-serif;
+  background: var(--bg-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 20px;
+  transition: background 0.3s ease;
+}
+
+/* ប៊ូតុង Toggle Theme */
+#theme-toggle {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  padding: 10px 16px;
+  border-radius: 20px;
+  border: none;
+  background: #2563eb;
+  color: #fff;
+  font-family: "Kantumruy Pro", sans-serif;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.quiz-container {
+  background: var(--card-bg);
+  padding: 35px 40px;
+  border-radius: 20px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+  width: 100%;
+  max-width: 520px;
+  position: relative;
+  overflow: hidden;
+}
+
+.quiz-container::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 6px;
+  background: linear-gradient(90deg, #2563eb, #3b82f6, #60a5fa);
+}
+
+h1 {
+  color: var(--text-color);
+  font-size: 22px;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.subtitle {
+  text-align: center;
+  color: #64748b;
+  font-size: 15px;
+  margin-bottom: 25px;
+}
+
+/* Grid ប៊ូតុង Category */
+.category-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.cat-btn {
+  background: #f1f5f9;
+  color: #1e293b;
+  border: 2px solid #cbd5e1;
+  padding: 16px;
+  border-radius: 12px;
+  font-size: 16px;
+  font-family: "Kantumruy Pro", sans-serif;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.cat-btn:hover {
+  background: #2563eb;
+  color: #ffffff;
+  border-color: #2563eb;
+  transform: translateY(-2px);
+}
+
+.quiz-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 14px;
+  font-weight: 600;
+  color: #64748b;
+  margin-bottom: 10px;
+}
+
+#timer {
+  background-color: #fef2f2;
+  color: #ef4444;
+  padding: 4px 12px;
+  border-radius: 20px;
+  border: 1px solid #fca5a5;
+}
+
+.progress-bar-container {
+  width: 100%;
+  height: 8px;
+  background-color: #e2e8f0;
+  border-radius: 10px;
+  overflow: hidden;
+  margin-bottom: 20px;
+}
+
+#progress-bar {
+  height: 100%;
+  width: 0%;
+  background: linear-gradient(90deg, #2563eb, #3b82f6);
+  transition: width 0.3s ease;
+}
+
+hr {
+  border: none;
+  height: 1px;
+  background: #e2e8f0;
+  margin-bottom: 20px;
+}
+
+#question {
+  font-size: 17px;
+  font-weight: 600;
+  color: #1e293b;
+  margin-bottom: 20px;
+  line-height: 1.6;
+}
+
+.options {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.btn {
+  background-color: var(--btn-bg);
+  color: var(--btn-text);
+  border: 2px solid var(--btn-border);
+  padding: 14px 20px;
+  border-radius: 12px;
+  font-size: 15px;
+  font-family: "Kantumruy Pro", sans-serif;
+  font-weight: 600;
+  cursor: pointer;
+  text-align: left;
+  transition: all 0.2s ease-in-out;
+}
+
+.btn:hover {
+  background-color: #eff6ff;
+  border-color: #3b82f6;
+  color: #1d4ed8;
+  transform: translateY(-2px);
+}
+
+.btn.correct {
+  background-color: #dcfce7 !important;
+  border-color: #22c55e !important;
+  color: #15803d !important;
+}
+
+.btn.incorrect {
+  background-color: #fee2e2 !important;
+  border-color: #ef4444 !important;
+  color: #b91c1c !important;
+}
+
+.btn.disabled {
+  pointer-events: none;
+}
+
+.hide {
+  display: none !important;
+}
+
+#result {
+  text-align: center;
+  padding: 20px 0;
+}
+
+#result h2 {
+  color: #0f172a;
+  font-size: 24px;
+  margin-bottom: 12px;
+}
+
+#score-text {
+  font-size: 18px;
+  color: #475569;
+  margin-bottom: 25px;
+}
+
+.action-btn {
+  background: linear-gradient(135deg, #2563eb, #1d4ed8);
+  color: #ffffff;
+  border: none;
+  padding: 14px 32px;
+  font-size: 16px;
+  font-family: "Kantumruy Pro", sans-serif;
+  font-weight: 600;
+  border-radius: 10px;
+  cursor: pointer;
+  box-shadow: 0 4px 14px rgba(37, 99, 235, 0.35);
+}
+.subtitle {
+  color: #64748b;
+  font-size: 14px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.category-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.high-score-box {
+  margin-top: 25px;
+  padding: 12px;
+  background-color: #f1f5f9;
+  border-radius: 10px;
+  font-size: 14px;
+  font-weight: 600;
+  color: #334155;
+  text-align: center;
+}
+
+.new-record {
+  color: #22c55e;
+  font-weight: 700;
+  font-size: 16px;
+  margin-bottom: 15px;
+}
+
+.action-buttons {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.action-btn {
+  background: linear-gradient(135deg, #2563eb, #1d4ed8);
+  color: #fff;
+  border: none;
+  padding: 12px 20px;
+  font-size: 14px;
+  font-family: "Kantumruy Pro", sans-serif;
+  font-weight: 600;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.secondary-btn {
+  background: #64748b !important;
+}
+
+#review-container {
+  margin-top: 25px;
+  text-align: left;
+  max-height: 250px;
+  overflow-y: auto;
+  border-top: 1px solid #e2e8f0;
+  padding-top: 15px;
+}
+
+.review-item {
+  margin-bottom: 15px;
+  font-size: 14px;
+  padding: 10px;
+  background: #f8fafc;
+  border-radius: 8px;
+}
+
+.review-correct {
+  color: #15803d;
+  font-weight: 600;
+}
+.review-wrong {
+  color: #b91c1c;
+  font-weight: 600;
+}
+/* Styling សម្រាប់ប៊ូតុង Mode */
+#theme-toggle {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  background-color: #2563eb;
+  color: #ffffff;
+  border: none;
+  padding: 10px 18px;
+  border-radius: 25px;
+  font-size: 14px;
+  font-family: "Kantumruy Pro", sans-serif;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+  transition: all 0.3s ease;
+}
+
+#theme-toggle:hover {
+  transform: scale(1.05);
+}
+
+/* Light Mode Styling (ពេលប្តូរទៅ Light Mode) */
+body.light-mode {
+  background: #f1f5f9 !important;
+  color: #0f172a;
+}
+
+body.light-mode .quiz-container {
+  background: #ffffff;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+}
+
+body.light-mode #theme-toggle {
+  background-color: #0f172a;
+  color: #ffffff;
+}
+
+body.light-mode .btn {
+  background-color: #f8fafc;
+  color: #1e293b;
+  border-color: #cbd5e1;
+}
+
+body.light-mode .high-score-box {
+  background-color: #e2e8f0;
+  color: #0f172a;
+}
+/* 1. កំណត់ទម្រង់ដើមជា Dark Mode (ផ្ទៃងងឹតពេញអេក្រង់) */
+body {
+  font-family:
+    "Kantumruy Pro",
+    -apple-system,
+    sans-serif;
+  background: #0f172a !important; /* ពណ៌ងងឹត Dark Navy */
+  color: #f8fafc;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease;
+}
+
+/* 2. កំណត់ Card ពេលនៅលើ Dark Mode */
+.quiz-container {
+  background: #1e293b; /* Card ពណ៌ប្រផេះងងឹត */
+  padding: 35px 40px;
+  border-radius: 20px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+  width: 100%;
+  max-width: 520px;
+  color: #ffffff;
+  transition: background-color 0.3s ease;
+}
+
+.quiz-container h1,
+.quiz-container h2,
+.quiz-container #question {
+  color: #ffffff !important;
+}
+
+.high-score-box {
+  background-color: #334155;
+  color: #cbd5e1;
+}
+
+/* 3. កំណត់ Light Mode ពេលចុចប្តូរ (ផ្ទៃភ្លឺ) */
+body.light-mode {
+  background: #f1f5f9 !important; /* ពណ៌សប្រផេះភ្លឺ */
+  color: #0f172a;
+}
+
+body.light-mode .quiz-container {
+  background: #ffffff; /* Card ពណ៌ស */
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+body.light-mode .quiz-container h1,
+body.light-mode .quiz-container h2,
+body.light-mode .quiz-container #question {
+  color: #0f172a !important;
+}
+
+body.light-mode .high-score-box {
+  background-color: #e2e8f0;
+  color: #334155;
+}

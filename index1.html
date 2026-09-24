@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="km">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>IT & Networking Quiz Hub</title>
+    <link rel="stylesheet" href="style1.css" />
+  </head>
+  <body>
+    <button id="theme-toggle" onclick="toggleTheme()">☀️ Mode</button>
+
+    <div class="quiz-container">
+      <h1>តេស្តចំណេះដឹង IT Hub</h1>
+
+      <!-- ទំព័រទី ១៖ ជ្រើសរើស Category -->
+      <div id="category-screen">
+        <p class="subtitle">សូមជ្រើសរើសប្រធានបទដើម្បីចាប់ផ្តើម៖</p>
+        <div class="category-list">
+          <button class="btn cat-btn" onclick="startQuiz('networking')">
+            🌐 Networking
+          </button>
+          <button class="btn cat-btn" onclick="startQuiz('web')">
+            💻 Web Dev
+          </button>
+          <button class="btn cat-btn" onclick="startQuiz('hardware')">
+            🖥️ Hardware
+          </button>
+        </div>
+
+        <!-- បង្ហាញ Top High Score -->
+        <div class="high-score-box">
+          🏆 ពិន្ទុខ្ពស់បំផុត (High Score):
+          <span id="high-score-display">0</span>/8
+        </div>
+      </div>
+
+      <!-- ទំព័រទី ២៖ ធ្វើ Quiz -->
+      <div id="quiz-screen" class="hide">
+        <div class="quiz-header">
+          <span id="question-count">សំណួរ 1 នៃ 8</span>
+          <span id="timer">⏱️ 15s</span>
+        </div>
+        <div class="progress-bar-container">
+          <div id="progress-bar"></div>
+        </div>
+        <hr />
+        <h2 id="question">សំណួរ...</h2>
+        <div class="options">
+          <button class="btn option-btn" onclick="selectAnswer(0)"></button>
+          <button class="btn option-btn" onclick="selectAnswer(1)"></button>
+          <button class="btn option-btn" onclick="selectAnswer(2)"></button>
+          <button class="btn option-btn" onclick="selectAnswer(3)"></button>
+        </div>
+      </div>
+
+      <!-- ទំព័រទី ៣៖ បង្ហាញលទ្ធផល -->
+      <div id="result-screen" class="hide">
+        <h2>លទ្ធផលរបស់អ្នក</h2>
+        <p id="score-text"></p>
+        <p id="new-record-text" class="new-record hide">
+          🎉 អបអរសាទរ! អ្នកបំបែកកំណត់ត្រាថ្មី!
+        </p>
+
+        <div class="action-buttons">
+          <button class="action-btn" onclick="restartQuiz()">
+            ធ្វើតេស្តឡើងវិញ
+          </button>
+          <button class="action-btn secondary-btn" onclick="toggleReview()">
+            មើលចម្លើយឡើងវិញ
+          </button>
+        </div>
+
+        <!-- ប្រអប់ Review ចម្លើយ -->
+        <div id="review-container" class="hide">
+          <h3>ចម្លើយដែលអ្នកបានឆ្លើយ៖</h3>
+          <div id="review-list"></div>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
