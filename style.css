@@ -1,0 +1,1066 @@
+/* សម្រាប់លាក់អេក្រង់ដែលមិនទាន់ត្រូវបង្ហាញ */
+.hide {
+  display: none !important;
+}
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Kantumruy Pro", "Segoe UI", Tahoma, sans-serif;
+}
+
+body {
+  background-color: #0b1120;
+  color: #f1f5f9;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+body.light-mode {
+  background-color: #f8fafc;
+  color: #0f172a;
+}
+
+/* Navbar Style */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 30px;
+  background: #1e293b;
+  border-bottom: 1px solid #334155;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+body.light-mode .navbar {
+  background: #ffffff;
+  border-color: #e2e8f0;
+}
+
+.nav-brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #38bdf8;
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+  gap: 20px;
+}
+
+.nav-links a {
+  color: #94a3b8;
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.2s;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+  color: #38bdf8;
+}
+
+.theme-btn {
+  background: #334155;
+  color: #38bdf8;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 20px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+/* Hero Section */
+.hero-section {
+  background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+  padding: 60px 20px;
+  text-align: center;
+  border-bottom: 1px solid #334155;
+}
+
+.hero-content {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.hero-content h1 {
+  font-size: 2.2rem;
+  color: #38bdf8;
+  margin-bottom: 15px;
+}
+
+.hero-content p {
+  color: #94a3b8;
+  font-size: 1.05rem;
+  line-height: 1.6;
+  margin-bottom: 25px;
+}
+
+.hero-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
+.btn {
+  padding: 12px 24px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: transform 0.2s;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+}
+
+.btn-primary {
+  background: #0284c7;
+  color: white;
+}
+
+.btn-secondary {
+  background: #334155;
+  color: #f1f5f9;
+}
+
+/* Container & Cards */
+.container {
+  max-width: 1100px;
+  margin: 40px auto;
+  padding: 0 20px;
+  flex: 1;
+}
+
+.section-title {
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 1.6rem;
+}
+
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 25px;
+}
+
+.course-card {
+  background: #1e293b;
+  border: 1px solid #334155;
+  border-radius: 12px;
+  padding: 25px;
+  display: flex;
+  flex-direction: column;
+  transition:
+    transform 0.2s,
+    border-color 0.2s;
+}
+
+.course-card:hover {
+  transform: translateY(-5px);
+  border-color: #38bdf8;
+}
+
+body.light-mode .course-card {
+  background: #ffffff;
+  border-color: #e2e8f0;
+}
+
+.card-icon {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+
+.card-badge {
+  align-self: flex-start;
+  background: rgba(56, 189, 248, 0.1);
+  color: #38bdf8;
+  padding: 4px 10px;
+  border-radius: 6px;
+  font-size: 0.8rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.course-card h3 {
+  margin-bottom: 10px;
+}
+
+.course-card p {
+  color: #94a3b8;
+  font-size: 0.9rem;
+  line-height: 1.5;
+  flex: 1;
+  margin-bottom: 20px;
+}
+
+.card-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+}
+
+.btn-link {
+  color: #38bdf8;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 0.9rem;
+}
+
+.btn-quiz {
+  background: #0284c7;
+  color: white;
+  padding: 8px 14px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-size: 0.85rem;
+  font-weight: bold;
+}
+
+/* Footer */
+.footer {
+  text-align: center;
+  padding: 20px;
+  background: #1e293b;
+  border-top: 1px solid #334155;
+  color: #94a3b8;
+  font-size: 0.85rem;
+  margin-top: 40px;
+}
+/* ==========================================
+   CARDS GRID SYSTEM (សម្រាប់អេក្រង់ធំ Desktop)
+   ========================================== */
+
+/* កូដនេះតំរៀបជា ៣ ជួរសម្រាប់អេក្រង់កុំព្យូទ័រ */
+.cards-container,
+.topics-grid,
+.category-grid,
+.topics-container,
+.grid-container {
+  display: grid !important;
+  grid-template-columns: repeat(
+    3,
+    1fr
+  ) !important; /* តំរៀបជា ៣ ជួរដេកទន្ទឹមគ្នា */
+  gap: 24px !important; /* ចន្លោះឃ្លាតរវាង Card នីមួយៗ */
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Style Card នីមួយៗឱ្យមានកម្ពស់ស្មើគ្នា */
+.card,
+.topic-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+}
+
+/* Effect ពេល Hover លើ Card */
+.card:hover,
+.topic-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+  border-color: #38bdf8;
+}
+
+/* ==========================================
+   RESPONSIVE (សម្រាប់ Tablet & Mobile)
+   ========================================== */
+
+/* សម្រាប់ Tablet ចេញ ២ ជួរ */
+@media (max-width: 992px) {
+  .cards-container,
+  .topics-grid,
+  .category-grid,
+  .topics-container,
+  .grid-container {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+}
+
+/* សម្រាប់ទូរស័ព្ទ ចេញ ១ ជួរ */
+@media (max-width: 640px) {
+  .cards-container,
+  .topics-grid,
+  .category-grid,
+  .topics-container,
+  .grid-container {
+    grid-template-columns: 1fr !important;
+  }
+}
+/* ==========================================
+   QUIZ PAGE STYLES (បន្ថែមសម្រាប់ quiz.html)
+   ========================================== */
+
+/* សម្រាប់លាក់អេក្រង់ */
+.hide {
+  display: none !important;
+}
+
+/* រៀបចំកណ្តាលអេក្រង់សម្រាប់ Quiz */
+.quiz-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 80vh;
+  padding: 20px;
+}
+
+/* ប្រអប់ Quiz ធំ */
+.quiz-container {
+  background: #1e293b;
+  border: 1px solid #334155;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+  border-radius: 16px;
+  width: 100%;
+  max-width: 600px;
+  padding: 30px;
+  margin: 40px auto;
+  text-align: center;
+}
+
+body.light-mode .quiz-container {
+  background: #ffffff;
+  border-color: #cbd5e1;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+}
+
+/* ប៊ូតុងជ្រើសរើសប្រភេទ Quiz (Networking, Web Dev, Hardware) */
+.category-btn {
+  display: block;
+  width: 100%;
+  padding: 12px 20px;
+  margin-bottom: 12px;
+  background: #334155;
+  color: #f1f5f9;
+  border: 1px solid #475569;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  text-align: left;
+}
+
+.category-btn:hover {
+  background: #0284c7;
+  border-color: #38bdf8;
+  transform: translateY(-2px);
+}
+
+/* ប្រអប់ពិន្ទុខ្ពស់បំផុត */
+.high-score-box {
+  margin-top: 20px;
+  padding: 12px;
+  background: rgba(56, 189, 248, 0.1);
+  border: 1px dashed #38bdf8;
+  border-radius: 8px;
+  color: #38bdf8;
+  font-weight: bold;
+}
+
+/* Header របស់សំណួរ និង ជម្រើសចម្លើយ */
+.quiz-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.options-container {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin: 20px 0;
+}
+
+.option-btn {
+  padding: 14px 18px;
+  background: #334155;
+  color: #f1f5f9;
+  border: 1px solid #475569;
+  border-radius: 8px;
+  text-align: left;
+  cursor: pointer;
+  font-size: 0.95rem;
+  transition: all 0.2s;
+}
+
+.option-btn:hover:not(:disabled) {
+  background: #475569;
+  border-color: #38bdf8;
+}
+
+.option-btn.correct {
+  background: #10b981 !important;
+  color: white;
+  border-color: #059669 !important;
+}
+
+.option-btn.incorrect {
+  background: #ef4444 !important;
+  color: white;
+  border-color: #dc2626 !important;
+}
+/* ==========================================
+   STYLING FOR BUTTONS & LIFELINE
+   ========================================== */
+
+/* កែប្រែប៊ូតុង 50:50 */
+.lifeline-btn,
+#fifty-fifty-btn {
+  background: linear-gradient(135deg, #f59e0b, #d97706);
+  color: #ffffff;
+  border: none;
+  padding: 8px 14px;
+  border-radius: 8px;
+  font-weight: bold;
+  font-size: 0.9rem;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(245, 158, 11, 0.3);
+  transition: all 0.2s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.lifeline-btn:hover:not(:disabled),
+#fifty-fifty-btn:hover:not(:disabled) {
+  background: linear-gradient(135deg, #fbbf24, #d97706);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(245, 158, 11, 0.4);
+}
+
+.lifeline-btn:disabled,
+#fifty-fifty-btn:disabled {
+  background: #475569;
+  color: #94a3b8;
+  cursor: not-allowed;
+  box-shadow: none;
+  opacity: 0.6;
+}
+
+/* កែប្រែប៊ូតុង "សំណួរបន្ទាប់" */
+#next-btn,
+.next-btn {
+  background: linear-gradient(135deg, #0284c7, #0369a1);
+  color: #ffffff;
+  border: none;
+  padding: 12px 28px;
+  border-radius: 10px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(2, 132, 199, 0.3);
+  transition: all 0.2s ease;
+  margin-top: 20px;
+  display: inline-block;
+}
+
+#next-btn:hover,
+.next-btn:hover {
+  background: linear-gradient(135deg, #38bdf8, #0284c7);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(56, 189, 248, 0.4);
+}
+
+/* កែប្រែ Timer Countdown ឱ្យស៊ីគ្នានឹងប៊ូតុង */
+.timer-badge,
+#timer-display {
+  background: rgba(239, 68, 68, 0.15);
+  color: #ef4444;
+  border: 1px solid #ef4444;
+  padding: 6px 12px;
+  border-radius: 8px;
+  font-weight: bold;
+  font-size: 0.9rem;
+}
+/* ==========================================
+   RESULT SCREEN STYLES
+   ========================================== */
+
+/* ចំណងជើង និងប្រអប់ពិន្ទុ */
+.result-title {
+  color: #38bdf8;
+  margin-bottom: 15px;
+  font-size: 1.8rem;
+}
+
+.final-score-box {
+  background: rgba(56, 189, 248, 0.1);
+  border: 1px solid #38bdf8;
+  border-radius: 12px;
+  padding: 15px;
+  margin-bottom: 25px;
+  color: #94a3b8;
+}
+
+.score-number {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #10b981;
+  margin-top: 5px;
+}
+
+.review-title {
+  text-align: left;
+  font-size: 1.1rem;
+  color: #f1f5f9;
+  margin-bottom: 12px;
+}
+
+/* ប្រអប់ Scroll បង្ហាញសំណួរ-ចម្លើយ */
+.review-box {
+  max-height: 280px;
+  overflow-y: auto;
+  padding-right: 8px;
+  margin-bottom: 25px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+/* របារ Scrollbar ឱ្យមើលទៅស្អាត */
+.review-box::-webkit-scrollbar {
+  width: 6px;
+}
+.review-box::-webkit-scrollbar-thumb {
+  background: #475569;
+  border-radius: 10px;
+}
+
+/* ប្រអប់សំណួរនីមួយៗ */
+.review-item {
+  background: #0f172a;
+  border: 1px solid #334155;
+  border-left: 4px solid #10b981;
+  padding: 12px 16px;
+  border-radius: 8px;
+  text-align: left;
+}
+
+.review-question {
+  font-weight: bold;
+  color: #f1f5f9;
+  font-size: 0.95rem;
+  margin-bottom: 6px;
+}
+
+.review-answer {
+  color: #10b981;
+  font-size: 0.9rem;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+/* ប៊ូតុង និង Link ខាងក្រោម */
+.result-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  align-items: center;
+}
+
+#restart-btn {
+  width: 100%;
+  padding: 12px;
+  background: linear-gradient(135deg, #0284c7, #0369a1);
+  color: #ffffff;
+  border: none;
+  border-radius: 10px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+#restart-btn:hover {
+  background: linear-gradient(135deg, #38bdf8, #0284c7);
+  transform: translateY(-2px);
+}
+
+.home-link {
+  color: #94a3b8;
+  text-decoration: none;
+  font-size: 0.9rem;
+  transition: color 0.2s;
+}
+
+.home-link:hover {
+  color: #38bdf8;
+}
+/* កែប្រែប្រអប់ស្រោប Cards ឱ្យចេញជា 3 ជួរទន្ទឹមគ្នា */
+.cards-container,
+.topics-grid,
+.category-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* រៀបជា ៣ ជួរដេកទន្ទឹមគ្នា */
+  gap: 24px; /* ប្រន្លោះឃ្លាតរវាង Card នីមួយៗ */
+  max-width: 1200px; /* ទទឹងប្រអប់សរុប */
+  margin: 0 auto; /* រញុចឱ្យនៅចំកណ្តាលអេក្រង់ */
+  padding: 20px;
+}
+
+/* រៀបចំ Card នីមួយៗឱ្យមានកម្ពស់ស្មើគ្នា និងឌីហ្សាញស្អាត */
+.card,
+.topic-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%; /* ធ្វើឱ្យ Card ទាំង ៣ មានកម្ពស់ស្មើគ្នា */
+  background: #1e293b;
+  border: 1px solid #334155;
+  border-radius: 16px;
+  padding: 24px;
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+/* Effect ពេល Hover លើ Card */
+.card:hover,
+.topic-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+  border-color: #38bdf8;
+}
+
+/* សម្រាប់អេក្រង់ទូរស័ព្ទ ឬ Tablet ឱ្យវាធ្លាក់មកក្រោមស្វ័យប្រវត្តិ */
+@media (max-width: 992px) {
+  .cards-container,
+  .topics-grid,
+  .category-grid {
+    grid-template-columns: repeat(2, 1fr); /* Tablet ចេញ ២ ជួរ */
+  }
+}
+
+@media (max-width: 640px) {
+  .cards-container,
+  .topics-grid,
+  .category-grid {
+    grid-template-columns: 1fr; /* ទូរស័ព្ទ ចេញ ១ ជួរ */
+  }
+}
+/* ==========================================
+   FORCE 3 COLUMNS GRID FOR TOPICS
+   ========================================== */
+
+/* បន្ថែម .card-grid ត្រង់នេះ */
+.card-grid,
+.topics-grid,
+.cards-container,
+.category-grid {
+  display: grid !important;
+  grid-template-columns: repeat(3, 1fr) !important; /* រៀបជា ៣ ជួរដេក */
+  gap: 20px !important;
+  width: 100% !important;
+  max-width: 1200px !important;
+  margin: 0 auto !important;
+}
+
+/* បន្ថែម .course-card ត្រង់នេះ */
+.course-card,
+.topic-card,
+.card {
+  width: 100% !important;
+  max-width: 100% !important;
+  box-sizing: border-box !important;
+}
+
+/* សម្រាប់ Tablet និង ទូរស័ព្ទ */
+@media (max-width: 992px) {
+  .card-grid,
+  .topics-grid,
+  .cards-container {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+}
+
+@media (max-width: 640px) {
+  .card-grid,
+  .topics-grid,
+  .cards-container {
+    grid-template-columns: 1fr !important;
+  }
+}
+/* ==========================================
+   MODERN NAVBAR MENU STYLES
+   ========================================== */
+
+/* ប្រអប់ស្រោប Menu ទាំងអស់ */
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: rgba(15, 23, 42, 0.6);
+  padding: 6px 12px;
+  border-radius: 30px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(8px);
+}
+
+/* លក្ខណៈនៃ Link នីមួយៗ */
+.nav-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 16px;
+  color: #94a3b8;
+  text-decoration: none;
+  font-size: 0.95rem;
+  font-weight: 500;
+  border-radius: 20px;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+/* Effect ពេលដាក់ Mouse លើ (Hover) */
+.nav-item:hover {
+  color: #38bdf8;
+  background: rgba(56, 189, 248, 0.1);
+  transform: translateY(-1px);
+}
+
+/* Style ពេល Link កំពុង Active (កំពុងនៅលើទំព័រនោះ) */
+.nav-item.active {
+  color: #ffffff;
+  background: linear-gradient(135deg, #02c75e, #0369a1);
+  box-shadow: 0 4px 12px rgba(2, 132, 199, 0.3);
+}
+
+/* Icon Animation */
+.nav-icon {
+  font-size: 1rem;
+  transition: transform 0.2s ease;
+}
+
+.nav-item:hover .nav-icon {
+  transform: scale(1.2);
+}
+/* ==========================================
+   ADVANCED MODERN NAVBAR DESIGN
+   ========================================== */
+
+/* Header រួម */
+.navbar {
+  display: flex !important;
+  justify-content: space-between !important;
+  align-items: center !important;
+  padding: 12px 40px !important;
+  background: #0b1120 !important;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05) !important;
+}
+
+/* ប្រអប់ Menu Capsules */
+.nav-links {
+  display: flex !important;
+  align-items: center !important;
+  gap: 8px !important;
+  background: rgba(30, 41, 59, 0.7) !important;
+  padding: 6px 10px !important;
+  border-radius: 50px !important;
+  border: 1px solid rgba(56, 189, 248, 0.2) !important;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3) !important;
+  backdrop-filter: blur(10px) !important;
+}
+
+/* លីងនីមួយៗ */
+.nav-item {
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 8px !important;
+  padding: 8px 18px !important;
+  color: #94a3b8 !important;
+  text-decoration: none !important;
+  font-size: 0.92rem !important;
+  font-weight: 500 !important;
+  border-radius: 30px !important;
+  transition: all 0.25s ease-in-out !important;
+}
+
+/* ពេលដាក់ Mouse លើ (Hover) */
+.nav-item:hover {
+  color: #38bdf8 !important;
+  background: rgba(56, 189, 248, 0.12) !important;
+  transform: translateY(-2px) !important;
+}
+
+/* លីងដែលកំពុង Active (នៅលើទំព័រដើម) */
+.nav-item.active {
+  color: #ffffff !important;
+  background: linear-gradient(135deg, #0284c7, #0369a1) !important;
+  box-shadow: 0 4px 12px rgba(2, 132, 199, 0.4) !important;
+}
+
+/* Scale Icon ពេល Hover */
+.nav-item:hover .nav-icon {
+  transform: scale(1.25) !important;
+  transition: transform 0.2s !important;
+}
+/* ==========================================
+   DROPDOWN & NAVBAR FIX (100% WORKING)
+   ========================================== */
+
+/* កំណត់ឱ្យ Capsule រៀបជួរស្មើគ្នា */
+.nav-links {
+  display: flex !important;
+  align-items: center !important;
+  gap: 4px !important;
+  position: relative !important;
+}
+
+/* កំណត់ item នីមួយៗ */
+.nav-item {
+  position: relative !important;
+  display: inline-flex !important;
+  align-items: center !important;
+}
+
+/* បូតុង Dropdown មេរៀន */
+.dropdown-btn {
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 6px !important;
+  padding: 8px 16px !important;
+  color: inherit !important;
+  text-decoration: none !important;
+  cursor: pointer !important;
+}
+
+.arrow {
+  font-size: 0.75rem !important;
+  transition: transform 0.2s ease !important;
+}
+
+/* ប្រអប់ Dropdown ទម្លាក់ចុះមកចំក្រោមពាក្យ មេរៀន */
+.dropdown-content {
+  display: none !important;
+  position: absolute !important;
+  top: 100% !important;
+  left: 0 !important;
+  margin-top: 12px !important;
+  background: #1e293b !important;
+  min-width: 190px !important;
+  border-radius: 12px !important;
+  border: 1px solid rgba(56, 189, 248, 0.3) !important;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5) !important;
+  padding: 6px 0 !important;
+  z-index: 99999 !important;
+}
+
+.dropdown-content a {
+  color: #cbd5e1 !important;
+  padding: 10px 16px !important;
+  text-decoration: none !important;
+  display: flex !important;
+  align-items: center !important;
+  gap: 10px !important;
+  font-size: 0.88rem !important;
+  transition: all 0.2s ease !important;
+  border-radius: 0 !important;
+  background: transparent !important;
+}
+
+.dropdown-content a:hover {
+  background: rgba(56, 189, 248, 0.15) !important;
+  color: #38bdf8 !important;
+  padding-left: 20px !important;
+}
+
+/* បង្ហាញ Dropdown ពេល Hover */
+.dropdown:hover .dropdown-content {
+  display: block !important;
+  animation: dropDownAnim 0.2s ease-in-out !important;
+}
+
+.dropdown:hover .arrow {
+  transform: rotate(180deg) !important;
+}
+
+@keyframes dropDownAnim {
+  from {
+    opacity: 0;
+    transform: translateY(-8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+} /* ==========================================
+   FORCE FIX DROPDOWN & NAVBAR LAYOUT
+   ========================================== */
+
+/* សម្រួល Header ឱ្យនៅជួរតែមួយ */
+header.navbar {
+  position: relative !important;
+  display: flex !important;
+  justify-content: space-between !important;
+  align-items: center !important;
+  z-index: 1000 !important;
+}
+
+/* សម្រួល Capsule Navbar */
+.nav-links {
+  position: relative !important;
+  display: flex !important;
+  align-items: center !important;
+}
+
+/* កំណត់ Element Dropdown ឱ្យនៅចំទីតាំង */
+.nav-item.dropdown {
+  position: relative !important;
+  display: inline-block !important;
+}
+
+.dropdown-btn {
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 6px !important;
+  text-decoration: none !important;
+  color: inherit !important;
+}
+
+/* ប្រអប់ Dropdown ពេលធ្លាក់ចុះ */
+.dropdown-content {
+  display: none !important;
+  position: absolute !important;
+  top: 100% !important;
+  left: 0 !important;
+  margin-top: 8px !important;
+  background: #1e293b !important;
+  min-width: 180px !important;
+  border-radius: 12px !important;
+  border: 1px solid rgba(56, 189, 248, 0.3) !important;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5) !important;
+  padding: 6px 0 !important;
+  z-index: 99999 !important;
+}
+
+.dropdown-content a {
+  color: #cbd5e1 !important;
+  padding: 10px 16px !important;
+  text-decoration: none !important;
+  display: flex !important;
+  align-items: center !important;
+  gap: 8px !important;
+  font-size: 0.88rem !important;
+  transition: background 0.2s !important;
+}
+
+.dropdown-content a:hover {
+  background: rgba(56, 189, 248, 0.15) !important;
+  color: #38bdf8 !important;
+}
+
+/* បង្ហាញ Dropdown ពេល Hover លើ «មេរៀន» */
+.dropdown:hover .dropdown-content {
+  display: block !important;
+}
+
+.dropdown:hover .arrow {
+  transform: rotate(180deg) !important;
+}
+/* ==========================================
+   ចលនា (Animations & Hover Effects)
+   ========================================== */
+
+/* ១. ចលនាពេល Hover លើ Course Cards (ងើបឡើង + បញ្ចេញពន្លឺ Glow) */
+.course-card {
+  transition:
+    transform 0.3s cubic-bezier(0.4, 0, 0.2, 1),
+    box-shadow 0.3s ease,
+    border-color 0.3s ease;
+  cursor: pointer;
+}
+
+.course-card:hover {
+  transform: translateY(-10px); /* ងើបឡើងលើ ១០px */
+  box-shadow: 0 12px 30px rgba(0, 162, 255, 0.25); /* ពន្លឺ Glow ពណ៌ខៀវ */
+  border-color: #00a2ff;
+}
+
+/* ចលនា Icon ក្នុង Card ពេល Hover */
+.course-card:hover .card-icon {
+  transform: scale(1.15) rotate(5deg);
+  transition: transform 0.3s ease;
+}
+
+/* ២. ចលនាពេល Hover លើប៊ូតុង Primary (ចាប់ផ្តើមរៀនមេរៀន / អានមេរៀន) */
+.btn-primary,
+.btn-link {
+  transition: all 0.25s ease;
+  position: relative;
+  overflow: hidden;
+  display: inline-block;
+  text-decoration: none;
+}
+
+.btn-primary:hover,
+.btn-link:hover {
+  transform: translateY(-3px) scale(1.03); /* រីកធំ និងងើបបន្តិច */
+  box-shadow: 0 6px 20px rgba(0, 162, 255, 0.5); /* Glowing effect */
+  filter: brightness(1.15);
+}
+
+/* ចលនាពេលចុចលើប៊ូតុង (Active Click Effect) */
+.btn-primary:active,
+.btn-link:active,
+.btn-quiz:active,
+.btn-secondary:active {
+  transform: translateY(1px) scale(0.98);
+}
+
+/* ៣. ចលនាពេល Hover លើប៊ូតុង ធ្វើតេស្ត (Quiz Button) */
+.btn-secondary,
+.btn-quiz {
+  transition: all 0.25s ease;
+  display: inline-block;
+  text-decoration: none;
+}
+
+.btn-secondary:hover,
+.btn-quiz:hover {
+  transform: translateY(-3px) scale(1.03);
+  box-shadow: 0 6px 20px rgba(255, 170, 0, 0.4);
+  filter: brightness(1.15);
+}
+
+/* ៤. ចលនាសម្រាប់ Dropdown Menu ពេល Hover លើ «មេរៀន» */
+.dropdown-content {
+  transition: all 0.3s ease;
+  opacity: 0;
+  transform: translateY(10px);
+  pointer-events: none;
+  display: block; /* ប្រើ opacity ជំនួស display:none ដើម្បីមាន Animation រលូន */
+}
+
+.dropdown:hover .dropdown-content {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+.dropdown-content a {
+  transition:
+    background 0.2s ease,
+    padding-left 0.2s ease;
+}
+
+.dropdown-content a:hover {
+  background-color: rgba(0, 162, 255, 0.15);
+  padding-left: 20px; /* រំកិលអក្សរទៅស្តាំបន្តិចពេល Hover */
+}
+.hide {
+  display: none !important;
+}

@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="km">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>IT & Networking Quiz Hub</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Kantumruy+Pro:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <button id="theme-toggle" class="theme-toggle-btn">🌻 Mode</button>
+
+    <div class="quiz-container">
+      <!-- Screen 1: Category Selection -->
+      <div id="category-screen">
+        <h1>តេស្តចំណេះដឹង IT Hub</h1>
+        <p class="subtitle">សូមជ្រើសរើសប្រធានបទដើម្បីចាប់ផ្តើម៖</p>
+        <div id="category-list">
+          <button class="category-btn" onclick="startQuiz('networking')">
+            🌐 Networking
+          </button>
+          <button class="category-btn" onclick="startQuiz('webdev')">
+            💻 Web Dev
+          </button>
+          <button class="category-btn" onclick="startQuiz('hardware')">
+            🖥️ Hardware
+          </button>
+        </div>
+        <div style="margin-top: 20px">
+          🏆 ពិន្ទុខ្ពស់បំផុត (High Score): <span id="high-score">0</span>
+        </div>
+        <a
+          href="index.html"
+          style="
+            display: inline-block;
+            margin-top: 15px;
+            color: #a0aec0;
+            text-decoration: none;
+          "
+          >⬅️ ត្រឡប់ទៅទំព័រដើម</a
+        >
+      </div>
+
+      <!-- Screen 2: Question Display -->
+      <div id="quiz-screen" class="hide">
+        <div
+          style="
+            display: flex;
+            justify-shadow: space-between;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 15px;
+          "
+        >
+          <span id="question-count">សំណួរ 1 នៃ 4</span>
+          <div>
+            <button
+              id="fifty-fifty-btn"
+              onclick="useFiftyFifty()"
+              style="
+                background: #f39c12;
+                border: none;
+                color: white;
+                padding: 5px 10px;
+                border-radius: 5px;
+                cursor: pointer;
+              "
+            >
+              💡 50:50
+            </button>
+            <span
+              id="timer"
+              style="
+                background: #e74c3c;
+                color: white;
+                padding: 5px 10px;
+                border-radius: 5px;
+                margin-left: 5px;
+              "
+              >⏰ 15s</span
+            >
+          </div>
+        </div>
+
+        <h3 id="question-text" class="question-text">សំណួរ...</h3>
+        <div id="options-container" class="options-container"></div>
+      </div>
+
+      <!-- Screen 3: Result Display -->
+      <div id="result-screen" class="hide" style="text-align: center">
+        <h2>🎉 លទ្ធផលនៃការធ្វើតេស្ត!</h2>
+        <h3 id="score-text" style="color: #00ffaa; margin: 15px 0">
+          អ្នកទទួលបាន 0 / 0 ពិន្ទុ
+        </h3>
+        <p id="feedback-text" style="color: #a0aec0; margin-bottom: 20px"></p>
+        <button
+          onclick="restartQuiz()"
+          class="btn-primary"
+          style="
+            padding: 10px 20px;
+            cursor: pointer;
+            border-radius: 8px;
+            border: none;
+            background: #00a2ff;
+            color: white;
+          "
+        >
+          🔄 ធ្វើតេស្តម្តងទៀត
+        </button>
+      </div>
+    </div>
+
+    <script src="quiz.js"></script>
+  </body>
+</html>

@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="km">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>IT & Networking Learning Platform</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Kantumruy+Pro:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- Navigation Bar ខាងលើ -->
+    <header class="navbar">
+      <div class="logo">🌐 IT Knowledge Hub</div>
+
+      <div class="nav-links">
+        <a href="index.html" class="nav-item active">
+          <span class="nav-icon">🏠</span>
+          <span class="nav-text">ទំព័រដើម</span>
+        </a>
+
+        <!-- Dropdown មេរៀន -->
+        <div class="nav-item dropdown">
+          <a href="networking.html" class="dropdown-btn">
+            <span class="nav-icon">📚</span>
+            <span class="nav-text">មេរៀន</span>
+            <span class="arrow">▾</span>
+          </a>
+          <div class="dropdown-content">
+            <a href="networking.html">🌐 Networking</a>
+            <a href="webdev.html">💻 Web Development</a>
+            <a href="hardware.html">🖥️ Hardware</a>
+          </div>
+        </div>
+
+        <a href="quiz.html" class="nav-item">
+          <span class="nav-icon">📝</span>
+          <span class="nav-text">ធ្វើតេស្ត Quiz</span>
+        </a>
+      </div>
+
+      <button id="theme-toggle" class="theme-btn">🌻 Mode</button>
+    </header>
+
+    <!-- Hero / Banner Section -->
+    <section class="hero-section">
+      <div class="hero-content">
+        <h1>ស្វាគមន៍មកកាន់ប្រព័ន្ធសិក្សា IT & Networking</h1>
+        <p>
+          ពង្រឹងចំណេះដឹងផ្នែកបណ្តាញ អភិវឌ្ឍន៍ Web និង Hardware តាមរយៈមេរៀនខ្លីៗ
+          និងការធ្វើតេស្តវាស់ស្ទង់សមត្ថភាព!
+        </p>
+
+        <div class="hero-buttons">
+          <a href="networking.html" class="btn btn-primary"
+            >📖 ចាប់ផ្តើមរៀនមេរៀន</a
+          >
+          <a href="quiz.html" class="btn btn-secondary">⚡ ធ្វើតេស្តភ្លាមៗ</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Main Content / Course Categories -->
+    <main class="container" id="lessons-section">
+      <h2 class="section-title">🎯 ជ្រើសរើសប្រធានបទសិក្សា</h2>
+
+      <div class="card-grid">
+        <!-- Card 1: Networking -->
+        <div class="course-card">
+          <div class="card-icon">🌐</div>
+          <div class="card-badge">Networking</div>
+          <h3>ប្រព័ន្ធបណ្តាញកុំព្យូទ័រ</h3>
+          <p>
+            សិក្សាអំពី IP Address, Subnetting, OSI Model, Router, Switch, និង
+            Network Protocols (DHCP, DNS, HTTP, SMTP)។
+          </p>
+          <div class="card-footer">
+            <a href="networking.html" class="btn-link">📖 អានមេរៀន</a>
+            <a href="quiz.html" class="btn-quiz">✍️ ធ្វើតេស្ត</a>
+          </div>
+        </div>
+
+        <!-- Card 2: Web Development -->
+        <div class="course-card">
+          <div class="card-icon">💻</div>
+          <div class="card-badge">Web Dev</div>
+          <h3>ការអភិវឌ្ឍគេហទំព័រ</h3>
+          <p>
+            រៀនសរសេរកូដ HTML5, រចនា CSS styling ស្អាតៗ និងបន្ថែម Interactive
+            Logic ជាមួយ JavaScript Fundamentals។
+          </p>
+          <div class="card-footer">
+            <a href="webdev.html" class="btn-link">📖 អានមេរៀន</a>
+            <a href="quiz.html" class="btn-quiz">✍️ ធ្វើតេស្ត</a>
+          </div>
+        </div>
+
+        <!-- Card 3: Hardware -->
+        <div class="course-card">
+          <div class="card-icon">🖥️</div>
+          <div class="card-badge">Hardware</div>
+          <h3>គ្រឿងបន្លាស់ និងប្រព័ន្ធកុំព្យូទ័រ</h3>
+          <p>
+            ស្វែងយល់ពីសមាសភាគ CPU, RAM, Storage (SSD/HDD), Motherboard,
+            និងរបៀបថែទាំកុំព្យូទ័រ។
+          </p>
+          <div class="card-footer">
+            <a href="hardware.html" class="btn-link">📖 អានមេរៀន</a>
+            <a href="quiz.html" class="btn-quiz">✍️ ធ្វើតេស្ត</a>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer class="footer">
+      <p>
+        © 2026 IT & Networking Learning Hub | រក្សាសិទ្ធិគ្រប់យ៉ាងដោយ Run-Net
+      </p>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
