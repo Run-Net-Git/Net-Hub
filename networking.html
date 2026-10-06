@@ -6,6 +6,48 @@
     <title>បណ្ដុំមេរៀន Networking - IT Knowledge Hub</title>
     <link rel="stylesheet" href="style.css" />
     <style>
+      /* CSS សម្រាប់ Navbar Buttons */
+      .navbar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 15px 40px;
+        background: #0f172a;
+        border-bottom: 1px solid #1e293b;
+      }
+
+      .nav-links {
+        display: flex;
+        gap: 12px;
+        align-items: center;
+      }
+
+      .nav-btn {
+        color: #94a3b8;
+        text-decoration: none;
+        padding: 8px 16px;
+        border-radius: 8px;
+        background: #1e293b;
+        border: 1px solid #334155;
+        font-size: 0.9rem;
+        font-weight: 500;
+        transition: all 0.2s ease;
+      }
+
+      .nav-btn:hover {
+        background: #334155;
+        color: #f8fafc;
+        border-color: #38bdf8;
+      }
+
+      .nav-btn.active {
+        background: #0284c7;
+        color: #ffffff;
+        border-color: #38bdf8;
+        box-shadow: 0 0 10px rgba(56, 189, 248, 0.3);
+      }
+
+      /* Card Layout */
       .lessons-grid {
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -66,11 +108,16 @@
       }
     </style>
   </head>
-  <body>
+  <body style="background-color: #0f172a; margin: 0; font-family: sans-serif">
     <!-- Header Navigation -->
     <header class="navbar">
-      <div class="logo">🌐 IT Knowledge Hub</div>
-      <nav>
+      <div
+        class="logo"
+        style="color: #f8fafc; font-weight: bold; font-size: 1.1rem"
+      >
+        🌐 IT Knowledge Hub
+      </div>
+      <nav class="nav-links">
         <a href="index.html" class="nav-btn">🏠 ទំព័រដើម</a>
         <a href="networking.html" class="nav-btn active">📚 មេរៀន Networking</a>
         <a href="quiz.html" class="nav-btn">📝 ធ្វើតេស្ត Quiz</a>
@@ -104,32 +151,6 @@
         </a>
 
         <!-- Card 2 -->
-        <a href="lessons/lesson2-osi.html" class="lesson-card">
-          <div>
-            <span class="badge">មេរៀនទី ២</span>
-            <div class="card-title">OSI Model ទាំង ៧ Layer</div>
-            <div class="card-desc">
-              សិក្សាពីដំណើរការនៃការផ្ញើ និងទទួលទិន្នន័យតាមស្រទាប់ Layer
-              នីមួយៗក្នុងប្រព័ន្ធ Networking।
-            </div>
-          </div>
-          <div class="read-more">ចូលរៀនមេរៀននេះ ➔</div>
-        </a>
-
-        <!-- Card 3 -->
-        <a href="lessons/lesson3-devices.html" class="lesson-card">
-          <div>
-            <span class="badge">មេរៀនទី ៣</span>
-            <div class="card-title">ឧបករណ៍ Network Devices</div>
-            <div class="card-desc">
-              ស្គាល់ពីតួនាទីរបស់ Router, Switch, Access Point, Firewall
-              និងរបៀបនៃការដំណើរការរបស់វា។
-            </div>
-          </div>
-          <div class="read-more">ចូលរៀនមេរៀននេះ ➔</div>
-        </a>
-
-        <!-- Card 4 -->
         <a
           href="#"
           class="lesson-card"
@@ -139,12 +160,33 @@
             <span
               class="badge"
               style="color: #a855f7; background: rgba(168, 85, 247, 0.1)"
-              >មេរៀនទី ៤</span
+              >មេរៀនទី ២</span
             >
-            <div class="card-title">Network Protocols (DHCP & DNS)</div>
+            <div class="card-title">OSI Model ទាំង ៧ Layer</div>
             <div class="card-desc">
-              ការយល់ដឹងពីសេវាកម្ម DHCP ក្នុងការផ្តល់ IP និង DNS ក្នុងការបកប្រែ
-              Domain Name។
+              សិក្សាពីដំណើរការនៃការផ្ញើ និងទទួលទិន្នន័យតាមស្រទាប់ Layer
+              នីមួយៗក្នុងប្រព័ន្ធ Networking।
+            </div>
+          </div>
+          <div class="read-more" style="color: #a855f7">ឆាប់ៗនេះ...</div>
+        </a>
+
+        <!-- Card 3 -->
+        <a
+          href="#"
+          class="lesson-card"
+          style="opacity: 0.6; cursor: not-allowed"
+        >
+          <div>
+            <span
+              class="badge"
+              style="color: #a855f7; background: rgba(168, 85, 247, 0.1)"
+              >មេរៀនទី ៣</span
+            >
+            <div class="card-title">ឧបករណ៍ Network Devices</div>
+            <div class="card-desc">
+              ស្គាល់ពីតួនាទីរបស់ Router, Switch, Access Point, Firewall
+              និងរបៀបនៃការដំណើរការរបស់វា។
             </div>
           </div>
           <div class="read-more" style="color: #a855f7">ឆាប់ៗនេះ...</div>
