@@ -3,66 +3,66 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>មេរៀន Networking - IT Knowledge Hub</title>
+    <title>បណ្ដុំមេរៀន Networking - IT Knowledge Hub</title>
     <link rel="stylesheet" href="style.css" />
     <style>
-      .lesson-container {
-        max-width: 900px;
-        margin: 0 auto;
-        padding: 20px;
+      .lessons-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 20px;
+        margin-top: 30px;
       }
 
       .lesson-card {
         background: #1e293b;
+        border: 1px solid #334155;
         border-radius: 12px;
         padding: 24px;
-        margin-bottom: 20px;
-        border: 1px solid #334155;
-        box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
-        transition:
-          transform 0.2s,
-          border-color 0.2s;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        transition: all 0.3s ease;
+        text-decoration: none;
       }
 
       .lesson-card:hover {
-        transform: translateY(-2px);
+        transform: translateY(-5px);
         border-color: #38bdf8;
+        box-shadow: 0 10px 20px rgba(56, 189, 248, 0.15);
       }
 
-      .lesson-title {
+      .badge {
+        align-self: flex-start;
+        background: rgba(56, 189, 248, 0.1);
         color: #38bdf8;
-        font-size: 1.25rem;
+        font-size: 0.8rem;
         font-weight: 600;
+        padding: 4px 12px;
+        border-radius: 20px;
         margin-bottom: 12px;
+      }
+
+      .card-title {
+        color: #f8fafc;
+        font-size: 1.2rem;
+        font-weight: 600;
+        margin-bottom: 10px;
+      }
+
+      .card-desc {
+        color: #94a3b8;
+        font-size: 0.9rem;
+        line-height: 1.5;
+        margin-bottom: 20px;
+      }
+
+      .read-more {
+        color: #38bdf8;
+        font-size: 0.9rem;
+        font-weight: 600;
         display: flex;
         align-items: center;
-        gap: 10px;
-      }
-
-      .lesson-content {
-        color: #cbd5e1;
-        line-height: 1.7;
-        font-size: 0.95rem;
-      }
-
-      .device-list {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-        gap: 15px;
-        margin-top: 15px;
-      }
-
-      .device-item {
-        background: #0f172a;
-        padding: 15px;
-        border-radius: 8px;
-        border-left: 4px solid #38bdf8;
-      }
-
-      .device-item strong {
-        color: #f8fafc;
-        display: block;
-        margin-bottom: 5px;
+        gap: 5px;
       }
     </style>
   </head>
@@ -72,87 +72,83 @@
       <div class="logo">🌐 IT Knowledge Hub</div>
       <nav>
         <a href="index.html" class="nav-btn">🏠 ទំព័រដើម</a>
-        <a href="#" class="nav-btn active">📚 មេរៀន</a>
+        <a href="networking.html" class="nav-btn active">📚 មេរៀន Networking</a>
         <a href="quiz.html" class="nav-btn">📝 ធ្វើតេស្ត Quiz</a>
       </nav>
-      <button class="mode-btn">🌞 Mode</button>
     </header>
 
-    <main class="lesson-container">
-      <h1 class="main-title">🌐 មេរៀនប្រព័ន្ធបណ្ដាញកុំព្យូទ័រ (Networking)</h1>
+    <main
+      class="container"
+      style="max-width: 1000px; margin: 40px auto; padding: 0 20px"
+    >
+      <h1 style="color: #f8fafc; text-align: center">
+        🌐 វគ្គសិក្សាប្រព័ន្ធបណ្ដាញ (Networking Course)
+      </h1>
+      <p style="color: #94a3b8; text-align: center; margin-top: 8px">
+        ជ្រើសរើសមេរៀនខាងក្រោមដើម្បីចាប់ផ្តើមសិក្សាពីកម្រិតដំបូង
+      </p>
 
-      <!-- មេរៀនទី ១ -->
-      <div class="lesson-card">
-        <div class="lesson-title">១. អ្វីទៅជា Network?</div>
-        <div class="lesson-content">
-          Network គឺជានិយមន័យនៃការតភ្ជាប់កុំព្យូទ័រ
-          ឬឧបករណ៍អេឡិចត្រូនិកចាប់ពីពីរឡើងទៅ ដើម្បីចែករំលែកទិន្នន័យ ធនធាន
-          និងសេវាកម្មផ្សេងៗ។
-        </div>
-      </div>
-
-      <!-- មេរៀនទី ២ -->
-      <div class="lesson-card">
-        <div class="lesson-title">២. ប្រភេទ IP Address</div>
-        <div class="lesson-content">
-          IP Address មានពីរប្រភេទសំខាន់ៗគឺ៖
-          <ul style="margin-top: 8px; padding-left: 20px">
-            <li>
-              <strong>IPv4:</strong> ទម្រង់ 32-bit (ឧទាហរណ៍៖
-              <code>192.168.1.1</code>)
-            </li>
-            <li>
-              <strong>IPv6:</strong> ទម្រង់ 128-bit ប្រើសម្រាប់ជំនួស IPv4
-              ដែលខ្វះខាត
-            </li>
-          </ul>
-        </div>
-      </div>
-
-      <!-- មេរៀនទី ៣ -->
-      <div class="lesson-card">
-        <div class="lesson-title">៣. អ្វីទៅជា Subnetting?</div>
-        <div class="lesson-content">
-          Subnetting គឺជាការបែងចែកបណ្ដាញ Network ធំមួយ ឱ្យទៅជាបណ្ដាញតូចៗ
-          (Subnets) ដើម្បីបង្កើនប្រសិទ្ធភាព និងសុវត្ថិភាពក្នុងការគ្រប់គ្រង។
-        </div>
-      </div>
-
-      <!-- មេរៀនទី ៤ -->
-      <div class="lesson-card">
-        <div class="lesson-title">៤. ស្គាល់ពី OSI Model ទាំង ៧ Layer</div>
-        <div class="lesson-content">
-          OSI Model គឺជាគំរូស្តង់ដារដែលពន្យល់ពីដំណើរការនៃការផ្ញើ
-          និងទទួលទិន្នន័យ៖
-          <p style="margin-top: 8px; color: #94a3b8">
-            Application ➔ Presentation ➔ Session ➔ Transport ➔ Network ➔ Data
-            Link ➔ Physical Layer
-          </p>
-        </div>
-      </div>
-
-      <!-- មេរៀនទី ៥ -->
-      <div class="lesson-card">
-        <div class="lesson-title">៥. ឧបករណ៍បណ្ដាញទូទៅ (Network Devices)</div>
-        <div class="lesson-content">
-          <div class="device-list">
-            <div class="device-item">
-              <strong>Router</strong>
-              ប្រើសម្រាប់តភ្ជាប់បណ្ដាញផ្សេងៗគ្នា និងចង្អុលផ្លូវទិន្នន័យ
-              (Routing)។
-            </div>
-            <div class="device-item">
-              <strong>Switch</strong>
-              ប្រើសម្រាប់តភ្ជាប់ឧបករណ៍ជាច្រើនក្នុងបណ្ដាញតែមួយ (LAN)។
+      <!-- Card List Grid -->
+      <div class="lessons-grid">
+        <!-- Card 1 -->
+        <a href="lessons/lesson1-ip.html" class="lesson-card">
+          <div>
+            <span class="badge">មេរៀនទី ១</span>
+            <div class="card-title">IP Address & Subnetting</div>
+            <div class="card-desc">
+              យល់ដឹងពីការបែងចែកអាសយដ្ឋាន IPv4, IPv6, Public/Private IP
+              និងរបៀបគណនា Subnetting។
             </div>
           </div>
-        </div>
-      </div>
+          <div class="read-more">ចូលរៀនមេរៀននេះ ➔</div>
+        </a>
 
-      <!-- Action Buttons -->
-      <div style="margin-top: 30px; display: flex; gap: 15px">
-        <a href="index.html" class="btn btn-secondary">⬅️ ត្រឡប់ទៅទំព័រដើម</a>
-        <a href="quiz.html" class="btn btn-primary">✍️ ធ្វើតេស្ត Networking</a>
+        <!-- Card 2 -->
+        <a href="lessons/lesson2-osi.html" class="lesson-card">
+          <div>
+            <span class="badge">មេរៀនទី ២</span>
+            <div class="card-title">OSI Model ទាំង ៧ Layer</div>
+            <div class="card-desc">
+              សិក្សាពីដំណើរការនៃការផ្ញើ និងទទួលទិន្នន័យតាមស្រទាប់ Layer
+              នីមួយៗក្នុងប្រព័ន្ធ Networking।
+            </div>
+          </div>
+          <div class="read-more">ចូលរៀនមេរៀននេះ ➔</div>
+        </a>
+
+        <!-- Card 3 -->
+        <a href="lessons/lesson3-devices.html" class="lesson-card">
+          <div>
+            <span class="badge">មេរៀនទី ៣</span>
+            <div class="card-title">ឧបករណ៍ Network Devices</div>
+            <div class="card-desc">
+              ស្គាល់ពីតួនាទីរបស់ Router, Switch, Access Point, Firewall
+              និងរបៀបនៃការដំណើរការរបស់វា។
+            </div>
+          </div>
+          <div class="read-more">ចូលរៀនមេរៀននេះ ➔</div>
+        </a>
+
+        <!-- Card 4 -->
+        <a
+          href="#"
+          class="lesson-card"
+          style="opacity: 0.6; cursor: not-allowed"
+        >
+          <div>
+            <span
+              class="badge"
+              style="color: #a855f7; background: rgba(168, 85, 247, 0.1)"
+              >មេរៀនទី ៤</span
+            >
+            <div class="card-title">Network Protocols (DHCP & DNS)</div>
+            <div class="card-desc">
+              ការយល់ដឹងពីសេវាកម្ម DHCP ក្នុងការផ្តល់ IP និង DNS ក្នុងការបកប្រែ
+              Domain Name។
+            </div>
+          </div>
+          <div class="read-more" style="color: #a855f7">ឆាប់ៗនេះ...</div>
+        </a>
       </div>
     </main>
   </body>
