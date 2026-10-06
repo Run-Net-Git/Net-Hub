@@ -1,3 +1,6 @@
+html {
+  scroll-behavior: smooth;
+}
 /* សម្រាប់លាក់អេក្រង់ដែលមិនទាន់ត្រូវបង្ហាញ */
 .hide {
   display: none !important;
