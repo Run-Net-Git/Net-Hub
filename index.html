@@ -54,36 +54,23 @@
         </p>
 
         <div class="hero-buttons">
-          <!-- ប៊ូតុងចាប់ផ្ដើមរៀនមេរៀន -->
-          <a href="#courses" class="btn-primary">📖 ចាប់ផ្ដើមរៀនមេរៀន</a>
-          <a href="quiz.html" class="btn btn-secondary">⚡ ធ្វើតេស្តភ្លាមៗ</a>
-        </div>
-      </div>
+    
+    <!-- Dropdown Container សម្រាប់ប៊ូតុងចាប់ផ្ដើមរៀនមេរៀន -->
+    <div class="dropdown">
+    <button class="btn-primary dropdown-btn" onclick="toggleDropdown(event)">
+        📖 ចាប់ផ្ដើមរៀនមេរៀន <span class="arrow">▼</span>
+    </button>
+    <div class="dropdown-content" id="myDropdown">
+        <a href="networking.html">🌐 Networking (បណ្ដាញ)</a>
+        <a href="webdev.html">💻 Web Dev (អភិវឌ្ឍគេហទំព័រ)</a>
+        <a href="hardware.html">🖥️ Hardware (គ្រឿងបម្លាស់)</a>
+    </div>
+</div>
+    <a href="quiz.html" class="btn btn-secondary">⚡ ធ្វើតេស្តភ្លាមៗ</a>
+
+</div>
     </section>
-    <!-- ផ្នែកជ្រើសរើសប្រធានបទ -->
-    <section id="courses" style="scroll-margin-top: 80px">
-      <h2>🎯 ជ្រើសរើសប្រធានបទសិក្សា</h2>
 
-      <div class="courses-grid">
-        <!-- Card 1: Networking -->
-        <div class="course-card">
-          ...
-          <a href="networking.html" class="btn">📖 អានមេរៀន</a>
-        </div>
-
-        <!-- Card 2: Web Dev -->
-        <div class="course-card">
-          ...
-          <a href="webdev.html" class="btn">📖 អានមេរៀន</a>
-        </div>
-
-        <!-- Card 3: Hardware -->
-        <div class="course-card">
-          ...
-          <a href="hardware.html" class="btn">📖 អានមេរៀន</a>
-        </div>
-      </div>
-    </section>
     <!-- Main Content / Course Categories -->
     <main class="container" id="lessons-section">
       <h2 class="section-title">🎯 ជ្រើសរើសប្រធានបទសិក្សា</h2>
@@ -135,6 +122,25 @@
         </div>
       </div>
     </main>
+    <script>
+function toggleDropdown(event) {
+    event.stopPropagation();
+    document.getElementById("myDropdown").classList.toggle("show");
+}
+
+// បិទ Dropdown វិញនៅពេលចុចលើកន្លែងផ្សេង
+window.onclick = function(event) {
+    if (!event.target.matches('.dropdown-btn')) {
+        var dropdowns = document.getElementsByClassName("dropdown-content");
+        for (var i = 0; i < dropdowns.length; i++) {
+            var openDropdown = dropdowns[i];
+            if (openDropdown.classList.contains('show')) {
+                openDropdown.classList.remove('show');
+            }
+        }
+    }
+}
+</script>
 
     <footer class="footer">
       <p>
