@@ -5,81 +5,155 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>មេរៀន Networking - IT Knowledge Hub</title>
     <link rel="stylesheet" href="style.css" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Kantumruy+Pro:wght@400;600;700&display=swap"
-      rel="stylesheet"
-    />
+    <style>
+      .lesson-container {
+        max-width: 900px;
+        margin: 0 auto;
+        padding: 20px;
+      }
+
+      .lesson-card {
+        background: #1e293b;
+        border-radius: 12px;
+        padding: 24px;
+        margin-bottom: 20px;
+        border: 1px solid #334155;
+        box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+        transition:
+          transform 0.2s,
+          border-color 0.2s;
+      }
+
+      .lesson-card:hover {
+        transform: translateY(-2px);
+        border-color: #38bdf8;
+      }
+
+      .lesson-title {
+        color: #38bdf8;
+        font-size: 1.25rem;
+        font-weight: 600;
+        margin-bottom: 12px;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+      }
+
+      .lesson-content {
+        color: #cbd5e1;
+        line-height: 1.7;
+        font-size: 0.95rem;
+      }
+
+      .device-list {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 15px;
+        margin-top: 15px;
+      }
+
+      .device-item {
+        background: #0f172a;
+        padding: 15px;
+        border-radius: 8px;
+        border-left: 4px solid #38bdf8;
+      }
+
+      .device-item strong {
+        color: #f8fafc;
+        display: block;
+        margin-bottom: 5px;
+      }
+    </style>
   </head>
   <body>
+    <!-- Header Navigation -->
     <header class="navbar">
       <div class="logo">🌐 IT Knowledge Hub</div>
-      <div class="nav-links">
-        <a href="index.html" class="nav-item"
-          ><span class="nav-icon">🏠</span
-          ><span class="nav-text">ទំព័រដើម</span></a
-        >
-        <div class="nav-item dropdown">
-          <a href="#" class="dropdown-btn active"
-            ><span class="nav-icon">📚</span><span class="nav-text">មេរៀន</span>
-            <span class="arrow">▾</span></a
-          >
-          <div class="dropdown-content">
-            <a href="networking.html">🌐 Networking</a>
-            <a href="webdev.html">💻 Web Development</a>
-            <a href="hardware.html">🖥️ Hardware</a>
-          </div>
-        </div>
-        <a href="quiz.html" class="nav-item"
-          ><span class="nav-icon">📝</span
-          ><span class="nav-text">ធ្វើតេស្ត Quiz</span></a
-        >
-      </div>
-      <button id="theme-toggle" class="theme-btn">☀️ Mode</button>
+      <nav>
+        <a href="index.html" class="nav-btn">🏠 ទំព័រដើម</a>
+        <a href="#" class="nav-btn active">📚 មេរៀន</a>
+        <a href="quiz.html" class="nav-btn">📝 ធ្វើតេស្ត Quiz</a>
+      </nav>
+      <button class="mode-btn">🌞 Mode</button>
     </header>
 
-    <main
-      class="container"
-      style="padding: 40px 20px; max-width: 900px; margin: auto"
-    >
-      <h1>🌐 មេរៀនប្រព័ន្ធបណ្តាញកុំព្យូទ័រ (Networking)</h1>
-      <hr style="margin: 20px 0; border-color: rgba(255, 255, 255, 0.1)" />
+    <main class="lesson-container">
+      <h1 class="main-title">🌐 មេរៀនប្រព័ន្ធបណ្ដាញកុំព្យូទ័រ (Networking)</h1>
 
-      <h2>១. អ្វីទៅជា Network?</h2>
-      <p>
-        Network គឺជាការតភ្ជាប់កុំព្យូទ័រ ឬឧបករណ៍អេឡិចត្រូនិចចាប់ពីពីរឡើងទៅ
-        ដើម្បីចែករំលែកទិន្នន័យ និងធនធានផ្សេងៗ...
-      </p>
-      <h2>២. ប្រភេទ IP Address</h2>
-      <p>IP Address មានពីរប្រភេទធំៗគឺ IPv4 (32-bit) និង IPv6 (128-bit)...</p>
+      <!-- មេរៀនទី ១ -->
+      <div class="lesson-card">
+        <div class="lesson-title">១. អ្វីទៅជា Network?</div>
+        <div class="lesson-content">
+          Network គឺជានិយមន័យនៃការតភ្ជាប់កុំព្យូទ័រ
+          ឬឧបករណ៍អេឡិចត្រូនិកចាប់ពីពីរឡើងទៅ ដើម្បីចែករំលែកទិន្នន័យ ធនធាន
+          និងសេវាកម្មផ្សេងៗ។
+        </div>
+      </div>
+
+      <!-- មេរៀនទី ២ -->
+      <div class="lesson-card">
+        <div class="lesson-title">២. ប្រភេទ IP Address</div>
+        <div class="lesson-content">
+          IP Address មានពីរប្រភេទសំខាន់ៗគឺ៖
+          <ul style="margin-top: 8px; padding-left: 20px">
+            <li>
+              <strong>IPv4:</strong> ទម្រង់ 32-bit (ឧទាហរណ៍៖
+              <code>192.168.1.1</code>)
+            </li>
+            <li>
+              <strong>IPv6:</strong> ទម្រង់ 128-bit ប្រើសម្រាប់ជំនួស IPv4
+              ដែលខ្វះខាត
+            </li>
+          </ul>
+        </div>
+      </div>
+
       <!-- មេរៀនទី ៣ -->
-      <h3>៣. អ្វីទៅជា Subnetting?</h3>
-      <p>
-        Subnetting គឺជាការបែងចែកបណ្ដាញ Network ធំមួយ ឱ្យទៅជាបណ្ដាញតូចៗ (Subnets)
-        ដើម្បីបង្កើនប្រសិទ្ធភាព និងសុវត្ថិភាពក្នុងការគ្រប់គ្រង។
-      </p>
+      <div class="lesson-card">
+        <div class="lesson-title">៣. អ្វីទៅជា Subnetting?</div>
+        <div class="lesson-content">
+          Subnetting គឺជាការបែងចែកបណ្ដាញ Network ធំមួយ ឱ្យទៅជាបណ្ដាញតូចៗ
+          (Subnets) ដើម្បីបង្កើនប្រសិទ្ធភាព និងសុវត្ថិភាពក្នុងការគ្រប់គ្រង។
+        </div>
+      </div>
 
       <!-- មេរៀនទី ៤ -->
-      <h3>៤. ស្គាល់ពី OSI Model ទាំង ៧ Layer</h3>
-      <p>
-        OSI Model គឺជាគំរូស្តង់ដារដែលពន្យល់ពីដំណើរការនៃការផ្ញើ និងទទួលទិន្នន័យ៖
-        Application, Presentation, Session, Transport, Network, Data Link, និង
-        Physical Layer។
-      </p>
+      <div class="lesson-card">
+        <div class="lesson-title">៤. ស្គាល់ពី OSI Model ទាំង ៧ Layer</div>
+        <div class="lesson-content">
+          OSI Model គឺជាគំរូស្តង់ដារដែលពន្យល់ពីដំណើរការនៃការផ្ញើ
+          និងទទួលទិន្នន័យ៖
+          <p style="margin-top: 8px; color: #94a3b8">
+            Application ➔ Presentation ➔ Session ➔ Transport ➔ Network ➔ Data
+            Link ➔ Physical Layer
+          </p>
+        </div>
+      </div>
 
       <!-- មេរៀនទី ៥ -->
-      <h3>៥. ឧបករណ៍បណ្ដាញទូទៅ (Network Devices)</h3>
-      <p>
-        <strong>Router:</strong> ប្រើសម្រាប់តភ្ជាប់បណ្ដាញផ្សេងៗគ្នា
-        និងចង្អុលផ្លូវទិន្នន័យ (Routing)។<br />
-        <strong>Switch:</strong> ប្រើសម្រាប់តភ្ជាប់ឧបករណ៍ជាច្រើនក្នុងបណ្ដាញតែមួយ
-        (LAN)។
-      </p>
+      <div class="lesson-card">
+        <div class="lesson-title">៥. ឧបករណ៍បណ្ដាញទូទៅ (Network Devices)</div>
+        <div class="lesson-content">
+          <div class="device-list">
+            <div class="device-item">
+              <strong>Router</strong>
+              ប្រើសម្រាប់តភ្ជាប់បណ្ដាញផ្សេងៗគ្នា និងចង្អុលផ្លូវទិន្នន័យ
+              (Routing)។
+            </div>
+            <div class="device-item">
+              <strong>Switch</strong>
+              ប្រើសម្រាប់តភ្ជាប់ឧបករណ៍ជាច្រើនក្នុងបណ្ដាញតែមួយ (LAN)។
+            </div>
+          </div>
+        </div>
+      </div>
 
-      <div style="margin-top: 30px">
-        <a href="index.html" class="btn btn-primary">⬅️ ត្រឡប់ទៅទំព័រដើម</a>
+      <!-- Action Buttons -->
+      <div style="margin-top: 30px; display: flex; gap: 15px">
+        <a href="index.html" class="btn btn-secondary">⬅️ ត្រឡប់ទៅទំព័រដើម</a>
+        <a href="quiz.html" class="btn btn-primary">✍️ ធ្វើតេស្ត Networking</a>
       </div>
     </main>
-
-    <script src="script.js"></script>
   </body>
 </html>
