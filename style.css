@@ -1064,13 +1064,13 @@ header.navbar {
 .hide {
   display: none !important;
 }
-/* Styling Navigation Bar & Buttons */
+/* Styling Navigation Bar */
 .navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 16px 40px;
-  background-color: #0b1329;
+  background-color: #0b1329 !important;
   border-bottom: 1px solid #1e293b;
 }
 
@@ -1079,37 +1079,34 @@ header.navbar {
   gap: 12px;
 }
 
-/* ប៊ូតុងធម្មតា */
+/* ប៊ូតុងធម្មតា (ទំព័រផ្សេង) */
 .nav-btn {
-  color: #94a3b8;
+  color: #e2e8f0 !important; /* ពណ៌អក្សរសច្បាស់ */
   text-decoration: none;
   padding: 10px 20px;
-  border-radius: 10px;
-  background: #172554;
-  border: 1px solid #1e3a8a;
+  border-radius: 8px;
+  background-color: #1e293b !important; /* ផ្ទៃប៊ូតុង */
+  border: 1px solid #334155 !important;
   font-size: 0.95rem;
   font-weight: 500;
   display: inline-flex;
   align-items: center;
   gap: 8px;
   transition: all 0.25s ease;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 
-/* Hover Effect ពេលយក Mouse ទៅដាក់លើ */
+/* ពេលយក Mouse ទៅដាក់លើ (Hover) */
 .nav-btn:hover {
-  background: #1e40af;
-  color: #ffffff;
-  border-color: #38bdf8;
-  transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(56, 189, 248, 0.25);
+  background-color: #334155 !important;
+  color: #ffffff !important;
+  border-color: #38bdf8 !important;
 }
 
-/* ប៊ូតុងដែលកំពុងស្ថិតនៅលើទំព័រនោះ (Active) */
+/* ប៊ូតុងដែលកំពុងនៅលើទំព័រនោះ (Active Button) */
 .nav-btn.active {
-  background: linear-gradient(135deg, #0284c7, #0369a1);
-  color: #ffffff;
-  border-color: #38bdf8;
+  background-color: #0284c7 !important; /* ពណ៌ខៀវស្រស់ */
+  color: #ffffff !important; /* អក្សរពណ៌ស */
+  border-color: #38bdf8 !important;
   font-weight: 600;
-  box-shadow: 0 0 15px rgba(56, 189, 248, 0.4);
+  box-shadow: 0 0 12px rgba(56, 189, 248, 0.4);
 }
