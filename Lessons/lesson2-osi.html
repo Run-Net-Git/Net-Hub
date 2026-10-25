@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="km">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>មេរៀនទី ២: OSI Model ទាំង ៧ Layer</title>
+    <link rel="stylesheet" href="../style.css" />
+    <style>
+      body {
+        background-color: #0b1329;
+        color: #cbd5e1;
+        font-family: sans-serif;
+        margin: 0;
+        padding: 40px 20px;
+      }
+      .container {
+        max-width: 800px;
+        margin: 0 auto;
+        background: #1e293b;
+        padding: 30px;
+        border-radius: 12px;
+        border: 1px solid #334155;
+      }
+      h1 {
+        color: #38bdf8;
+        font-size: 1.8rem;
+        border-bottom: 2px solid #334155;
+        padding-bottom: 12px;
+        margin-bottom: 24px;
+      }
+      h2 {
+        color: #f8fafc;
+        font-size: 1.3rem;
+        border-bottom: 1px solid #334155;
+        padding-bottom: 8px;
+        margin-top: 25px;
+      }
+      p,
+      li {
+        color: #94a3b8;
+        line-height: 1.6;
+      }
+      code {
+        background: #0f172a;
+        color: #38bdf8;
+        padding: 3px 8px;
+        border-radius: 4px;
+      }
+      .back-btn {
+        display: inline-block;
+        margin-bottom: 20px;
+        color: #38bdf8;
+        text-decoration: none;
+        font-weight: bold;
+      }
+      .back-btn:hover {
+        text-decoration: underline;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <!-- ប៊ូតុងត្រឡប់ក្រោយ -->
+      <a href="../networking.html" class="back-btn">⬅️ ត្រឡប់ទៅបណ្ដុំមេរៀន</a>
+
+      <h1>មេរៀនទី ២: OSI Model ទាំង ៧ Layer</h1>
+
+      <h2>១. អ្វីទៅជា OSI Model?</h2>
+      <p>
+        OSI (Open Systems Interconnection) Model
+        គឺជាគំរូស្តង់ដារមួយដែលត្រូវបានបង្កើតឡើងដើម្បីពន្យល់ពីរបៀបដែលទិន្នន័យត្រូវបានបញ្ជូនពីឧបករណ៍មួយទៅឧបករណ៍មួយទៀតតាមរយៈប្រព័ន្ធបណ្ដាញ
+        (Network) ដោយបែងចែកវាជា ស្រទាប់ (Layers) ចំនួន ៧។
+      </p>
+
+      <h2>២. ស្រទាប់ទាំង ៧ របស់ OSI Model</h2>
+      <ul style="padding-left: 20px">
+        <li>
+          <strong>Layer 7 - Application Layer:</strong>
+          ជាស្រទាប់ជាប់ទាក់ទងនឹងអ្នកប្រើប្រាស់ផ្ទាល់ ឧទាហរណ៍៖ HTTP, FTP, DNS។
+        </li>
+        <li>
+          <strong>Layer 6 - Presentation Layer:</strong>
+          ធ្វើការបកប្រែទ្រង់ទ្រាយទិន្នន័យ ការអ៊ិនគ្រីប (Encryption)
+          និងការបង្ហាប់ទិន្នន័យ (Compression)។
+        </li>
+        <li>
+          <strong>Layer 5 - Session Layer:</strong> គ្រប់គ្រងការបង្កើត រក្សា
+          និងបិទទំនាក់ទំនង (Sessions) រវាងកម្មវិធីទាំងពីរ។
+        </li>
+        <li>
+          <strong>Layer 4 - Transport Layer:</strong>
+          ធានាការបញ្ជូនទិន្នន័យដោយសុវត្ថិភាព តាមរយៈ TCP ឬ UDP។
+        </li>
+        <li>
+          <strong>Layer 3 - Network Layer:</strong> ធ្វើការជ្រើសរើសផ្លូវ
+          (Routing) និងប្រើប្រាស់ IP Address ដើម្បីបញ្ជូនទិន្នន័យ[cite: 17]។
+        </li>
+        <li>
+          <strong>Layer 2 - Data Link Layer:</strong>
+          គ្រប់គ្រងការផ្ទេរទិន្នន័យក្នុង Network តែមួយ ដោយប្រើប្រាស់ MAC
+          Address[cite: 17]។
+        </li>
+        <li>
+          <strong>Layer 1 - Physical Layer:</strong> ជាស្រទាប់ භូតិសាស្ត្រ
+          ដែលបម្លែងទិន្នន័យទៅជាសញ្ញាអគ្គិសនី ឬពន្លឺឆ្លងកាត់ខ្សែបណ្ដាញ (Cables)។
+        </li>
+      </ul>
+
+      <h2>៣. សារៈសំខាន់នៃ OSI Model</h2>
+      <p>
+        វាជួយឱ្យអ្នកបច្ចេកទេសបណ្ដាញ (Network Engineers)
+        ងាយស្រួលក្នុងការស្វែងរកកំហុសឆ្គង (Troubleshooting)
+        និងធ្វើឱ្យផលិតផលពីក្រុមហ៊ុនផ្សេងគ្នាអាចប្រើប្រាស់ជាមួយគ្នាបាន។
+      </p>
+    </div>
+  </body>
+</html>
