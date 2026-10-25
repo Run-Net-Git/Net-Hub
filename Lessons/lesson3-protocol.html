@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="km">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>មេរៀនទី ៣: Network Protocols (DHCP & DNS)</title>
+    <link rel="stylesheet" href="../style.css" />
+    <style>
+      body {
+        background-color: #0b1329;
+        color: #cbd5e1;
+        font-family: sans-serif;
+        margin: 0;
+        padding: 40px 20px;
+      }
+      .container {
+        max-width: 800px;
+        margin: 0 auto;
+        background: #1e293b;
+        padding: 30px;
+        border-radius: 12px;
+        border: 1px solid #334155;
+      }
+      h1 {
+        color: #38bdf8;
+        font-size: 1.8rem;
+        border-bottom: 2px solid #334155;
+        padding-bottom: 12px;
+        margin-bottom: 24px;
+      }
+      h2 {
+        color: #f8fafc;
+        font-size: 1.3rem;
+        border-bottom: 1px solid #334155;
+        padding-bottom: 8px;
+        margin-top: 25px;
+      }
+      p,
+      li {
+        color: #94a3b8;
+        line-height: 1.6;
+      }
+      code {
+        background: #0f172a;
+        color: #38bdf8;
+        padding: 3px 8px;
+        border-radius: 4px;
+      }
+      .back-btn {
+        display: inline-block;
+        margin-bottom: 20px;
+        color: #38bdf8;
+        text-decoration: none;
+        font-weight: bold;
+      }
+      .back-btn:hover {
+        text-decoration: underline;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <!-- ប៊ូតុងត្រឡប់ក្រោយ -->
+      <a href="../networking.html" class="back-btn">⬅️ ត្រឡប់ទៅបណ្ដុំមេរៀន</a>
+
+      <h1>មេរៀនទី ៣: Network Protocols (DHCP & DNS)</h1>
+
+      <h2>១. អ្វីទៅជា Network Protocol?</h2>
+      <p>
+        Network Protocol គឺជាសំណុំនៃច្បាប់
+        ឬបទដ្ឋានដែលកំណត់ពីរបៀបដែលទិន្នន័យត្រូវទ្រង់ទ្រាយ បញ្ជូន
+        និងទទួលបានរវាងឧបករណ៍ផ្សេងៗគ្នានៅក្នុងប្រព័ន្ធបណ្ដាញ (Network)។
+      </p>
+
+      <h2>២. សេវាកម្ម DHCP (Dynamic Host Configuration Protocol)</h2>
+      <p>
+        DHCP គឺជាប្រព័ន្ធស្វ័យប្រវត្តិដែលមាននាទីក្នុងការផ្តល់ IP Address, Subnet
+        Mask, Gateway និង DNS ទៅឱ្យឧបករណ៍នីមួយៗដែលភ្ជាប់ចូលមកក្នុង Network
+        ដោយមិនបាច់កំណត់ដោយដៃ (Manual) នោះឡើយ។
+      </p>
+      <ul style="padding-left: 20px">
+        <li>
+          <strong>អត្ថប្រយោជន៍៖</strong> ជួយកាត់បន្ថយកំហុសឆ្គងក្នុងការកំណត់ IP
+          និងងាយស្រួលគ្រប់គ្រងឧបករណ៍ច្រើន។
+        </li>
+      </ul>
+
+      <h2>៣. សេវាកម្ម DNS (Domain Name System)</h2>
+      <p>
+        DNS ทำหน้าที่ប្រៀបដូចជា "កាតព៌ត័មាន (Phonebook)" របស់អ៊ីនធឺណិត
+        ដែលធ្វើការបកប្រែឈ្មោះគេហទំព័រដែលមនុស្សងាយចាំ (ឧទាហរណ៍៖
+        <code>google.com</code>) ទៅជាលេខ IP Address (ឧទាហរណ៍៖
+        <code>142.250.190.46</code>) ដើម្បីឱ្យកុំព្យូទ័រអាចស្គាល់គ្នាបាន។
+      </p>
+
+      <h2>៤. សារៈសំខាន់របស់ DHCP និង DNS</h2>
+      <p>
+        បើសគ្មាន DHCP យើងត្រូវកំណត់ IP ឱ្យកុំព្យូទ័រនីមួយៗដោយដៃផ្ទាល់
+        ហើយបើសគ្មាន DNS យើងត្រូវចាំលេខ IP វែងៗដើម្បីចូលមើលវេបសាយ
+        ដែលវាពិបាកខ្លាំងណាស់សម្រាប់អ្នកប្រើប្រាស់។
+      </p>
+    </div>
+  </body>
+</html>
