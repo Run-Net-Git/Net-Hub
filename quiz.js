@@ -89,6 +89,121 @@ const quizData = {
       options: ["255.0.0.0", "255.255.0.0", "255.255.255.0", "255.255.255.255"],
       correct: 2,
     },
+    {
+      question: "៥. តើ Protocol មួយណាដែលប្រើសម្រាប់ផ្ញើអ៊ីមែល?",
+      options: ["SMTP", "IMAP", "POP3", "ទាំងអស់ខាងលើ"],
+      correct: 3,
+    },
+    {
+      question: "៦. តើ Protocol មួយណាដែលផ្តល់សុវត្ថិភាពក្នុងការផ្ញើទិន្នន័យ?",
+      options: ["HTTP", "HTTPS", "FTP", "Telnet"],
+      correct: 1,
+    },
+    {
+      question: "៧. តើ Protocol មួយណាដែលប្រើសម្រាប់ចូលទៅកាន់ Server ពីចម្ងាយ?",
+      options: ["FTP", "SSH", "SMTP", "DNS"],
+      correct: 1,
+    },
+    {
+      question:
+        "៨. តើ Protocol មួយណាដែលប្រើសម្រាប់បម្លែងឈ្មោះ Domain ទៅ IP Address?",
+      options: ["HTTP", "DNS", "DHCP", "SNMP"],
+      correct: 1,
+    },
+    {
+      question:
+        "៩. តើ Protocol មួយណាដែលប្រើសម្រាប់ផ្ញើឯកសារពី Client ទៅ Server?",
+      options: ["FTP", "SMTP", "HTTP", "SNMP"],
+      correct: 0,
+    },
+    {
+      question: "១០. តើ Protocol មួយណាដែលប្រើសម្រាប់ផ្ញើទិន្នន័យជាមធ្យម?",
+      options: ["TCP", "UDP", "HTTP", "HTTPS"],
+      correct: 0,
+    },
+    {
+      question:
+        "១១. តើ Protocol មួយណាដែលប្រើសម្រាប់ផ្ញើទិន្នន័យដោយមិនមានការត្រួតពិនិត្យ?",
+      options: ["TCP", "UDP", "FTP", "SMTP"],
+      correct: 1,
+    },
+    {
+      question: "១២. តើ​​ IPv6 មានប្រវែងប៉ុន្មាន Bit?",
+      options: ["32 Bits", "64 Bits", "128 Bits", "256 Bits"],
+      correct: 2,
+    },
+    {
+      question: "១៣. តើ​​ MAC Address មានប្រវែងប៉ុន្មាន Byte?",
+      options: ["4 Bytes", "6 Bytes", "8 Bytes", "10 Bytes"],
+      correct: 1,
+    },
+    {
+      question: "១៤. តើ​ IPv6 គីជា្វអ្វី?",
+      options: [
+        "Internet Protocol Version 4",
+        "Internet Protocol Version 6",
+        "Internet Proxy Protocol",
+        "Internet Packet Protocol",
+      ],
+      correct: 1,
+    },
+    {
+      question:
+        "១៥. តើ Protocol មួយណាដែលប្រើសម្រាប់ផ្ញើអ៊ីមែលពី Client ទៅ Server?",
+      options: ["SMTP", "IMAP", "POP3", "HTTP"],
+      correct: 0,
+    },
+    {
+      question: "១៦. តើ​ OSI Model មានប៉ុន្មានស្រទាប់?",
+      options: ["4 ស្រទាប់", "5 ស្រទាប់", "6 ស្រទាប់", "7 ស្រទាប់"],
+      correct: 3,
+    },
+    {
+      question:
+        "១៧. តើ Protocol មួយណាដែលប្រើសម្រាប់ផ្ញើទិន្នន័យក្នុងបណ្តាញ Local Area Network?",
+      options: ["TCP", "UDP", "Ethernet", "IP"],
+      correct: 2,
+    },
+    {
+      question:
+        "១៨. តើ​ OSI Model ស្រទាប់ណាដែលទទួលខុសត្រូវចំពោះការផ្ញើទិន្នន័យពី Application ទៅ Network?",
+      options: [
+        "ស្រទាប់ Application",
+        "ស្រទាប់ Transport",
+        "ស្រទាប់ Network",
+        "ស្រទាប់ Data Link",
+      ],
+      correct: 1,
+    },
+    {
+      question:
+        "១៩. តើ​ OSI Model ស្រទាប់ណាដែលទទួលខុសត្រូវចំពោះការផ្ញើទិន្នន័យពី Network ទៅ Physical Layer?",
+      options: [
+        "ស្រទាប់ Network",
+        "ស្រទាប់ Data Link",
+        "ស្រទាប់ Physical",
+        "ស្រទាប់ Transport",
+      ],
+      correct: 1,
+    },
+    {
+      question:
+        "២០. តើ Protocol មួយណាដែលប្រើសម្រាប់ផ្ញើទិន្នន័យក្នុងបណ្តាញ Wide Area Network?",
+      options: ["TCP", "UDP", "Ethernet", "IP"],
+      correct: 3,
+    },
+    {
+      question:
+        "២១. តើ Protocol មួយណាដែលប្រើសម្រាប់ផ្ញើទិន្នន័យក្នុងបណ្តាញ Local Area Network?",
+      options: ["TCP", "UDP", "Ethernet", "IP"],
+      correct: 2,
+    },
+    {
+      question:
+        "២២. តើ Protocol មួយណាដែលប្រើសម្រាប់ផ្ញើទិន្នន័យក្នុងបណ្តាញ Wireless?",
+      options: ["TCP", "UDP", "Wi-Fi", "IP"],
+      correct: 2,
+    },
   ],
   webdev: [
     {
@@ -128,6 +243,250 @@ const quizData = {
         "Optical Storage",
       ],
       correct: 0,
+    },
+    {
+      question: "៣. តើ Hard Disk ជាប្រភេទ Memory បែបណា?",
+      options: [
+        "Volatile (បាត់ទិន្នន័យពេលបិទភ្លើង)",
+        "Non-Volatile",
+        "Permanent Storage",
+        "Optical Storage",
+      ],
+      correct: 1,
+    },
+    {
+      question: "៤. តើ CPU មានតួនាទីអ្វីខ្លះក្នុងកុំព្យូទ័រ?",
+      options: [
+        "គណនាទិន្នន័យ និងបញ្ជាដំណើរការទាំងអស់",
+        "ផ្ទុកទិន្នន័យជាអចិន្ត្រៃយ៍",
+        "ផ្គត់ផ្គង់ថាមពលអគ្គិសនី",
+        "បង្ហាញរូបភាពលើអេក្រង់",
+      ],
+      correct: 0,
+    },
+    {
+      question: "៥. តើ RAM មានតួនាទីអ្វីខ្លះក្នុងកុំព្យូទ័រ?",
+      options: [
+        "ផ្ទុកទិន្នន័យជាអចិន្ត្រៃយ៍",
+        "ផ្គត់ផ្គង់ថាមពលអគ្គិសនី",
+        "ផ្ទុកទិន្នន័យបណ្តោះអាសន្នសម្រាប់កម្មវិធីដែលកំពុងដំណើរការ",
+        "បង្ហាញរូបភាពលើអេក្រង់",
+      ],
+      correct: 0,
+    },
+    {
+      question: "៦. តើប្រភេទ Storage មួយណាដែលមានល្បឿនលឿនជាងគេ?",
+      options: [
+        "HDD (Hard Disk Drive)",
+        "SSD NVMe M.2",
+        "SATA SSD",
+        "Flash Drive",
+      ],
+      correct: 1,
+    },
+    {
+      question: "៧. តើ Motherboard មានតួនាទីអ្វីខ្លះក្នុងកុំព្យូទ័រ?",
+      options: [
+        "ផ្ទុកទិន្នន័យជាអចិន្ត្រៃយ៍",
+        "ផ្គត់ផ្គង់ថាមពលអគ្គិសនី",
+        "ផ្ជាប់សមាសភាគ hardware ទាំងអស់ឱ្យធ្វើការជាមួយគ្នា",
+        "បង្ហាញរូបភាពលើអេក្រង់",
+      ],
+      correct: 2,
+    },
+    {
+      question: "៨. តើ GPU (Graphics Processing Unit) មានតួនាទីចម្បងអ្វី?",
+      options: [
+        "គណនាទិន្នន័យទូទៅ",
+        "ដំណើរការ និងបង្ហាញរូបភាព/វីដេអូ (Graphics)",
+        "រក្សាទុកឯកសារសំខាន់ៗ",
+        "គ្រប់គ្រងការចុច Keyboard និង Mouse",
+      ],
+      correct: 1,
+    },
+    {
+      question:
+        "៩. តើឧបករណ៍មួយណាដែលផ្គត់ផ្គង់ថាមពលអគ្គិសនីទៅកាន់គ្រឿងបំណែកកុំព្យូទ័រ?",
+      options: ["CPU", "Motherboard", "PSU (Power Supply Unit)", "Cooling Fan"],
+      correct: 2,
+    },
+    {
+      question: "១០. តើ ROM (Read-Only Memory) ត្រូវបានប្រើប្រាស់សម្រាប់អ្វី?",
+      options: [
+        "ផ្ទុកទិន្នន័យហ្គេម និងកម្មវិធី",
+        "រក្សាទុកកូដ BIOS/UEFI សម្រាប់ Boot ម៉ាស៊ីន",
+        "បង្កើនល្បឿនអ៊ីនធឺណិត",
+        "បណ្ដោះអាសន្នពេលបើកកម្មវិធីច្រើន",
+      ],
+      correct: 1,
+    },
+    {
+      question: "១១. តើឧបករណ៍ណាដែលចាត់ទុកថាជា Input Device?",
+      options: ["Monitor", "Printer", "Keyboard", "Speaker"],
+      correct: 2,
+    },
+    {
+      question: "១២. តើឧបករណ៍ណាដែលចាត់ទុកថាជា Output Device?",
+      options: ["Mouse", "Microphone", "Scanner", "Monitor"],
+      correct: 3,
+    },
+    {
+      question:
+        "១៣. តើ (Port) ប្រភេទណាមួយដែលប្រើប្រាស់សម្រាប់បញ្ជូនទាំងសញ្ញាវីដេអូ និងអូឌីយ៉ូឌីជីថលក្នុងពេលតែមួយ?",
+      options: ["VGA", "HDMI", "PS/2", "COM Port"],
+      correct: 1,
+    },
+    {
+      question: "១៤. តើមុខងារចម្បងរបស់ Heat Sink និង Cooling Fan គឺដើម្បីអ្វី?",
+      options: [
+        "បង្កើនល្បឿនអុិនធឺណិត",
+        "បឺតយកកម្ដៅចេញពី CPU និងកាត់បន្ថយកម្ដៅក្នុងម៉ាស៊ីន",
+        "ផ្គត់ផ្គង់ចរន្តអគ្គិសនីបន្ថែម",
+        "ការពារកុំព្យូទ័រពីមេរោគ",
+      ],
+      correct: 1,
+    },
+    {
+      question:
+        "១៥. តើ SSD មុខ M.2 NVMe ភ្ជាប់តាមរយៈរន្ធប្រភេទអ្វីនៅលើ Motherboard?",
+      options: ["PCIe / M.2 Slot", "SATA Cable", "USB Port", "PCI Slot ចាស់"],
+      correct: 0,
+    },
+    {
+      question:
+        "១៦. តើកូដ POST (Power-On Self-Test) មានន័យដូចម្តេចពេលកុំព្យូទ័រចាប់ផ្តើមដំបូង?",
+      options: [
+        "ការឆែកពិនិត្យ Hardware ទាំងអស់ថាតើដំណើរការធម្មតាដែរឬទេ",
+        "ការទាញយក Windows មកកាន់ RAM",
+        "ការតភ្ជាប់ប្រព័ន្ធអ៊ីនធឺណិត",
+        "ការសម្អាតមេរោគក្នុង Hard Disk",
+      ],
+      correct: 0,
+    },
+    {
+      question:
+        "១៧. តើអង្គចងចាំキャッシュ (Cache Memory) ដែលស្ថិតនៅជិត CPU បំផុតគឺកម្រិតណា?",
+      options: ["L3 Cache", "L2 Cache", "L1 Cache", "RAM Cache"],
+      correct: 2,
+    },
+    {
+      question:
+        "១៨. តើកាតពង្រីក (Expansion Cards) ដូចជា GPU ត្រូវเสียbចូលទៅក្នុងរន្ធអ្វីនៅលើ Motherboard?",
+      options: ["RAM Slot", "PCI Express (PCIe) Slot", "IDE Slot", "SATA Port"],
+      correct: 1,
+    },
+    {
+      question: "១៩. តើ RAID 0 មានលក្ខណៈពិសេសអ្វី?",
+      options: [
+        "បម្រុងទុកទិន្នន័យ (Backup)",
+        "បែងចែកទិន្នន័យឆ្លាស់គ្នាលើ Hard Disk ច្រើនដើម្បីបង្កើនល្បឿន",
+        "ការពារកុំព្យូទ័រពីការដាច់ភ្លើង",
+        "លុបទិន្នន័យស្វ័យប្រវត្តិ",
+      ],
+      correct: 1,
+    },
+    {
+      question: "២០. តើ BIOS/UEFI ត្រូវបានរក្សាទុកនៅលើអ្វីពេលកុំព្យូទ័របិទ?",
+      options: ["RAM", "CMOS / Flash ROM Chip", "Hard Disk", "CPU Cache"],
+      correct: 1,
+    },
+    {
+      question: "២១. តើថាមពលរបស់ PSU (Power Supply Unit) វាស់វែងជាខ្នាតអ្វី?",
+      options: ["Volt (V)", "Ampere (A)", "Watt (W)", "Hertz (Hz)"],
+      correct: 2,
+    },
+    {
+      question:
+        "២២. តើខ្សែកាបប្រភេទណាដែលនិយមប្រើប្រាស់សម្រាប់ភ្ជាប់បណ្ដាញអ៊ីនធឺណិតមានខ្សែ (Local Network)?",
+      options: [
+        "HDMI Cable",
+        "VGA Cable",
+        "Ethernet Cable (UTP/Cat6)",
+        "SATA Cable",
+      ],
+      correct: 2,
+    },
+    {
+      question:
+        "២៣. តើប៊ូតុង CMOS Battery (ថាមពល) នៅលើ Motherboard មាននាទីអ្វី?",
+      options: [
+        "ផ្គត់ផ្គង់ថាមពលឱ្យ CPU ពេលបើកហ្គេមធំៗ",
+        "រក្សាទុកម៉ោង ថ្ងៃខែ និងការកំណត់ System BIOS ពេលបិទម៉ាស៊ីន",
+        "សាកថ្មឱ្យ Laptop",
+        "ទប់ស្កាត់មិនឱ្យឆេះ motherboard",
+      ],
+      correct: 1,
+    },
+    {
+      question:
+        "២៤. តើអង្គចងចាំប្រភេទណាដែលមានល្បឿនលឿនជាងគេក្នុងចំណោមអង្គចងចាំទាំងអស់?",
+      options: ["Hard Disk", "SSD", "RAM", "CPU Registers"],
+      correct: 3,
+    },
+    {
+      question:
+        "២៥. តើកុំព្យូទ័រប្រភេទ All-in-One មានលក្ខណៈខុសពី Desktop ធម្មតាอย่างไร?",
+      options: [
+        "គ្មាន Keyboard និង Mouse",
+        "គ្មាន Case ដាច់ដោយឡែក គឺ Hardware ទាំងអស់ត្រូវបានបង្កប់នៅខាងក្រោយ Monitor",
+        "ប្រើប្រាស់ថាមពលថ្មទូរស័ព្ទ",
+        "មិនអាចភ្ជាប់អ៊ីនធឺណិតបាន",
+      ],
+      correct: 1,
+    },
+    {
+      question:
+        "២៦. តើ Refresh Rate របស់ Monitor មានអង្គវាស់ជាអ្វី និងបញ្ជាក់ពីអ្វី?",
+      options: [
+        "Hertz (Hz) - ចំនួនដងដែលរូបភាពត្រូវបានគូរឡើងវិញក្នុងមួយវិនាទី",
+        "Pixel - ទំហំភាពច្បាស់",
+        "Inch - ទំហំអេក្រង់",
+        "Volt - កម្រិតភ្លើងប្រើប្រាស់",
+      ],
+      correct: 0,
+    },
+    {
+      question:
+        "២៧. តើសុភាសិត ឬកូដកំហុសពេល Boot ម៉ាស៊ីនចេញជាសំឡេងទីប (Beep Codes) បង្ហាញពីអ្វី?",
+      options: [
+        "កុំព្យូទ័រតភ្ជាប់អ៊ីនធឺណិតបានជោគជ័យ",
+        "សញ្ញាព្រមានពីបញ្ហា Hardware ដូចជា RAM ឬ CPU ຜິດប្រក្រតី",
+        "សញ្ញាបញ្ជាក់ថាថ្មពេញ",
+        "ការទាញយក Update ថ្មី",
+      ],
+      correct: 1,
+    },
+    {
+      question:
+        "២៨. តើបច្ចេកវិទ្យា ECC RAM ត្រូវបានប្រើប្រាស់នៅលើម៉ាស៊ីនប្រភេទណា?",
+      options: [
+        "Gaming PC ធម្មតា",
+        "Servers និង Workstations សំខាន់ៗ",
+        "Smartphones",
+        "Office Laptops",
+      ],
+      correct: 1,
+    },
+    {
+      question: "២៩. តើ Peripherals មានន័យថាអ្វីក្នុងប្រព័ន្ធកុំព្យូទ័រ?",
+      options: [
+        "សមាសភាគស្នូលក្នុង Case (CPU, RAM)",
+        "ឧបករណ៍បរិវា ឬឧបករណ៍ខាងក្រៅដែលភ្ជាប់បន្ថែម (Keyboard, Mouse, Printer)",
+        "ប្រព័ន្ធប្រតិបត្តិការ Windows",
+        "ប្រព័ន្ធខ្សែភ្លើងក្នុងផ្ទះ",
+      ],
+      correct: 1,
+    },
+    {
+      question:
+        "៣០. តើសារៈសំខាន់នៃ Thermal Paste រវាង CPU និង Heat Sink គឺដើម្បីអ្វី?",
+      options: [
+        "ជួយឱ្យ CPU ជាប់នឹង Heat Sink មាំល្អ",
+        "បំពេញចន្លោះប្រហោងខ្យល់តូចៗ ដើម្បីជួយបញ្ជូនកម្ដៅពី CPU ទៅ Heat Sink បានល្អប្រសើរ",
+        "ការពារមិនឱ្យឆក់ចរន្តអគ្គិសនី",
+        "បន្ថែមល្បឿនអុិនធឺណិតឱ្យ CPU",
+      ],
+      correct: 1,
     },
   ],
 };
