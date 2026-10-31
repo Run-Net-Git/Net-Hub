@@ -1199,3 +1199,70 @@ header.navbar {
     transform: translateY(0);
   }
 }
+/* Navigation Container */
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(15, 23, 42, 0.6);
+  backdrop-filter: blur(12px);
+  padding: 6px;
+  border-radius: 99px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+/* Base Nav Items */
+.nav-btn {
+  color: #94a3b8 !important;
+  text-decoration: none;
+  padding: 8px 18px;
+  border-radius: 99px !important;
+  font-size: 0.9rem;
+  font-weight: 500;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+  border: 1px solid transparent !important;
+}
+
+/* Hover State */
+.nav-btn:hover {
+  color: #f8fafc !important;
+  background: rgba(255, 255, 255, 0.05) !important;
+}
+
+/* Active State */
+.nav-btn.active {
+  background: linear-gradient(135deg, #0284c7 0%, #0369a1 100%) !important;
+  color: #ffffff !important;
+  font-weight: 600;
+  box-shadow: 0 0 16px rgba(2, 132, 199, 0.4);
+  border: 1px solid rgba(56, 189, 248, 0.3) !important;
+}
+/* រចនាប័ទ្មទូទៅ និង Effect ពេល Hover លើប៊ូតុងក្នុង Card */
+#courses a[href*="networking.html"],
+#courses a[href*="webdev.html"],
+#courses a[href*="hardware.html"],
+#courses a[href*="quiz.html"] {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Effect ពេលเอา Mouse ដាក់លើប៊ូតុងអានមេរៀន (Dark Button) */
+#courses a[href*="networking.html"]:hover,
+#courses a[href*="webdev.html"]:hover,
+#courses a[href*="hardware.html"]:hover {
+  background-color: #334155 !important;
+  border-color: #38bdf8 !important;
+  transform: translateY(-3px);
+  box-shadow: 0 4px 12px rgba(56, 189, 248, 0.2);
+}
+
+/* Effect ពេលเอา Mouse ដាក់លើប៊ូតុងធ្វើតេស្ត (Blue Button) */
+#courses a[href*="quiz.html"]:hover {
+  background-color: #02689c !important;
+  transform: translateY(-3px);
+  box-shadow: 0 0 15px rgba(2, 132, 199, 0.5);
+}

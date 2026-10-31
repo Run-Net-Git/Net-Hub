@@ -11,143 +11,403 @@
     />
   </head>
   <body>
-    <!-- Navigation Bar ខាងលើ -->
-    <header class="navbar">
-      <div class="logo">🌐 IT Knowledge Hub</div>
-
+    <!-- 1. Navigation Bar (Navbar នៅផ្នែកខាងលើគេ) -->
+    <nav class="navbar">
+      <div class="logo">IT Knowledge Hub</div>
       <div class="nav-links">
-        <a href="index.html" class="nav-item active">
-          <span class="nav-icon">🏠</span>
-          <span class="nav-text">ទំព័រដើម</span>
-        </a>
+        <a href="index.html" class="nav-btn active">🏠 ទំព័រដើម</a>
 
-        <!-- Dropdown មេរៀន -->
-        <div class="nav-item dropdown">
-          <a href="networking.html" class="dropdown-btn">
-            <span class="nav-icon">📚</span>
-            <span class="nav-text">មេរៀន</span>
-            <span class="arrow">▾</span>
+        <!-- Dropdown Menu សម្រាប់មេរៀន -->
+        <div class="dropdown">
+          <a
+            href="#"
+            class="nav-btn dropdown-btn"
+            onclick="toggleDropdown(event)"
+          >
+            📚 មេរៀន ▼
           </a>
-          <div class="dropdown-content">
+          <div class="dropdown-content" id="myDropdown">
             <a href="networking.html">🌐 Networking</a>
-            <a href="webdev.html">💻 Web Development</a>
+            <a href="webdev.html">💻 Web Dev</a>
             <a href="hardware.html">🖥️ Hardware</a>
           </div>
         </div>
 
-        <a href="quiz.html" class="nav-item">
-          <span class="nav-icon">📝</span>
-          <span class="nav-text">ធ្វើតេស្ត Quiz</span>
-        </a>
+        <a href="quiz.html" class="nav-btn">📝 ធ្វើតេស្ត Quiz</a>
+      </div>
+    </nav>
+
+    <!-- 2. Hero Section (ផ្នែកបង្ហាញចំណងជើងធំ និង Stats ស្អាតៗ) -->
+    <section
+      class="hero-section"
+      style="text-align: center; padding: 60px 20px 40px"
+    >
+      <div
+        style="
+          display: inline-flex;
+          align-items: center;
+          gap: 8px;
+          background: rgba(56, 189, 248, 0.1);
+          border: 1px solid rgba(56, 189, 248, 0.2);
+          padding: 6px 16px;
+          border-radius: 99px;
+          margin-bottom: 20px;
+        "
+      >
+        <span
+          style="
+            width: 8px;
+            height: 8px;
+            background: #38bdf8;
+            border-radius: 50%;
+            box-shadow: 0 0 8px #38bdf8;
+          "
+        ></span>
+        <span style="color: #38bdf8; font-size: 0.85rem; font-weight: 600"
+          >វេទិការសិក្សា IT និង Networking ឥតគិតថ្លៃ</span
+        >
       </div>
 
-      <button id="theme-toggle" class="theme-btn">☀️ Mode</button>
-    </header>
+      <h1
+        style="
+          font-size: 2.8rem;
+          font-weight: 800;
+          line-height: 1.2;
+          margin-bottom: 16px;
+          background: linear-gradient(135deg, #ffffff 0%, #94a3b8 100%);
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+        "
+      >
+        ពង្រីកចំណេះដឹងបច្ចេកវិទ្យា <br />
+        <span
+          style="
+            background: linear-gradient(135deg, #38bdf8 0%, #818cf8 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+          "
+          >ជាមួយ Net-Hub</span
+        >
+      </h1>
 
-    <!-- Hero / Banner Section -->
-    <section class="hero-section">
-      <div class="hero-content">
-        <h1>ស្វាគមន៍មកកាន់ប្រព័ន្ធសិក្សា IT & Networking</h1>
-        <p>
-          ពង្រឹងចំណេះដឹងផ្នែកបណ្តាញ អភិវឌ្ឍន៍ Network, Web និង Hardware តាមរយៈមេរៀនខ្លីៗ
-          និងការធ្វើតេស្តវាស់ស្ទង់សមត្ថភាព!
-        </p>
+      <p
+        style="
+          color: #94a3b8;
+          max-width: 600px;
+          margin: 0 auto 32px;
+          font-size: 1.05rem;
+          line-height: 1.6;
+        "
+      >
+        ប្រមូលផ្ដុំមេរៀនសំខាន់ៗលើផ្នែក Networking, Web Development និង Hardware
+        ព្រមទាំងការធ្វើតេស្តស្ទង់សមត្ថភាពជាក់ស្ដែង។
+      </p>
 
-        <div class="hero-buttons">
-    
-    <!-- Dropdown Container សម្រាប់ប៊ូតុងចាប់ផ្ដើមរៀនមេរៀន -->
-    <div class="dropdown">
-    <button class="btn-primary dropdown-btn" onclick="toggleDropdown(event)">
-        📖 ចាប់ផ្ដើមរៀនមេរៀន <span class="arrow">▼</span>
-    </button>
-    <div class="dropdown-content" id="myDropdown">
-        <a href="networking.html">🌐 Networking (បណ្ដាញ)</a>
-        <a href="webdev.html">💻 Web Dev (អភិវឌ្ឍគេហទំព័រ)</a>
-        <a href="hardware.html">🖥️ Hardware (គ្រឿងបម្លាស់)</a>
-    </div>
-</div>
-    <a href="quiz.html" class="btn btn-secondary">⚡ ធ្វើតេស្តភ្លាមៗ</a>
-
-</div>
+      <!-- Stats Counters -->
+      <div
+        style="
+          display: flex;
+          justify-content: center;
+          gap: 40px;
+          margin-top: 30px;
+          margin-bottom: 30px;
+        "
+      >
+        <div>
+          <h3 style="color: #38bdf8; font-size: 1.6rem; margin: 0">15+</h3>
+          <p style="color: #64748b; font-size: 0.85rem; margin: 4px 0 0">
+            មេរៀនសរុប
+          </p>
+        </div>
+        <div style="width: 1px; background: #1e293b"></div>
+        <div>
+          <h3 style="color: #38bdf8; font-size: 1.6rem; margin: 0">30+</h3>
+          <p style="color: #64748b; font-size: 0.85rem; margin: 4px 0 0">
+            សំណួរ Quiz
+          </p>
+        </div>
+        <div style="width: 1px; background: #1e293b"></div>
+        <div>
+          <h3 style="color: #38bdf8; font-size: 1.6rem; margin: 0">100%</h3>
+          <p style="color: #64748b; font-size: 0.85rem; margin: 4px 0 0">
+            ឥតគិតថ្លៃ
+          </p>
+        </div>
+      </div>
     </section>
 
-    <!-- Main Content / Course Categories -->
-    <main class="container" id="lessons-section">
-      <h2 class="section-title">🎯 ជ្រើសរើសប្រធានបទសិក្សា</h2>
+    <!-- 3. Courses Section (ផ្នែក Card ជ្រើសរើសមេរៀនទាំង ៣) -->
+    <section
+      id="courses"
+      style="max-width: 1200px; margin: 20px auto 60px auto; padding: 0 20px"
+    >
+      <h2
+        style="
+          color: #f8fafc;
+          text-align: center;
+          font-size: 1.8rem;
+          margin-bottom: 40px;
+        "
+      >
+        🎯 ជ្រើសរើសប្រធានបទសិក្សា
+      </h2>
 
-      <div class="card-grid">
+      <div
+        style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px"
+      >
         <!-- Card 1: Networking -->
-        <div class="course-card">
-          <div class="card-icon">🌐</div>
-          <div class="card-badge">Networking</div>
-          <h3>ប្រព័ន្ធបណ្តាញកុំព្យូទ័រ</h3>
-          <p>
-            សិក្សាអំពី IP Address, Subnetting, OSI Model, Router, Switch, និង
-            Network Protocols (DHCP, DNS, HTTP, SMTP)។
-          </p>
-          <div class="card-footer">
-            <a href="networking.html" class="btn-link">📖 អានមេរៀន</a>
-            <a href="quiz.html" class="btn-quiz">✍️ ធ្វើតេស្ត</a>
+        <div
+          style="
+            background: #111827;
+            border: 1px solid #1f2937;
+            border-radius: 12px;
+            padding: 24px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+          "
+        >
+          <div>
+            <div style="font-size: 2.5rem; margin-bottom: 12px">🌐</div>
+            <span
+              style="
+                background: rgba(56, 189, 248, 0.1);
+                color: #38bdf8;
+                font-size: 0.8rem;
+                font-weight: 600;
+                padding: 4px 10px;
+                border-radius: 20px;
+              "
+              >Networking</span
+            >
+            <h3 style="color: #f8fafc; font-size: 1.3rem; margin: 12px 0 8px 0">
+              ប្រព័ន្ធបណ្ដាញកុំព្យូទ័រ
+            </h3>
+            <p
+              style="
+                color: #94a3b8;
+                font-size: 0.9rem;
+                line-height: 1.5;
+                margin-bottom: 20px;
+              "
+            >
+              សិក្សាអំពី IP Address, Subnetting, OSI Model, Router, Switch និង
+              Network Protocols។
+            </p>
+          </div>
+          <div style="display: flex; gap: 10px">
+            <a
+              href="networking.html"
+              style="
+                background: #1f2937;
+                color: #ffffff;
+                text-decoration: none;
+                padding: 10px;
+                border-radius: 6px;
+                font-size: 0.85rem;
+                font-weight: bold;
+                flex: 1;
+                text-align: center;
+                border: 1px solid #374151;
+              "
+              >📖 អានមេរៀន</a
+            >
+            <a
+              href="quiz.html"
+              style="
+                background: #0284c7;
+                color: #ffffff;
+                text-decoration: none;
+                padding: 10px;
+                border-radius: 6px;
+                font-size: 0.85rem;
+                font-weight: bold;
+                flex: 1;
+                text-align: center;
+              "
+              >⚡ ធ្វើតេស្ត</a
+            >
           </div>
         </div>
 
-        <!-- Card 2: Web Development -->
-        <div class="course-card">
-          <div class="card-icon">💻</div>
-          <div class="card-badge">Web Dev</div>
-          <h3>ការអភិវឌ្ឍគេហទំព័រ</h3>
-          <p>
-            រៀនសរសេរកូដ HTML5, រចនា CSS styling ស្អាតៗ និងបន្ថែម Interactive
-            Logic ជាមួយ JavaScript Fundamentals។
-          </p>
-          <div class="card-footer">
-            <a href="webdev.html" class="btn-link">📖 អានមេរៀន</a>
-            <a href="quiz.html" class="btn-quiz">✍️ ធ្វើតេស្ត</a>
+        <!-- Card 2: Web Dev -->
+        <div
+          style="
+            background: #111827;
+            border: 1px solid #1f2937;
+            border-radius: 12px;
+            padding: 24px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+          "
+        >
+          <div>
+            <div style="font-size: 2.5rem; margin-bottom: 12px">💻</div>
+            <span
+              style="
+                background: rgba(56, 189, 248, 0.1);
+                color: #38bdf8;
+                font-size: 0.8rem;
+                font-weight: 600;
+                padding: 4px 10px;
+                border-radius: 20px;
+              "
+              >Web Dev</span
+            >
+            <h3 style="color: #f8fafc; font-size: 1.3rem; margin: 12px 0 8px 0">
+              ការអភិវឌ្ឍគេហទំព័រ
+            </h3>
+            <p
+              style="
+                color: #94a3b8;
+                font-size: 0.9rem;
+                line-height: 1.5;
+                margin-bottom: 20px;
+              "
+            >
+              រៀនសរសេរកូដ HTML5, រចនា CSS styling ស្អាតៗ និងបន្ថែម Interactive
+              Logic ជាមួយ JavaScript។
+            </p>
+          </div>
+          <div style="display: flex; gap: 10px">
+            <a
+              href="webdev.html"
+              style="
+                background: #1f2937;
+                color: #ffffff;
+                text-decoration: none;
+                padding: 10px;
+                border-radius: 6px;
+                font-size: 0.85rem;
+                font-weight: bold;
+                flex: 1;
+                text-align: center;
+                border: 1px solid #374151;
+              "
+              >📖 អានមេរៀន</a
+            >
+            <a
+              href="quiz.html"
+              style="
+                background: #0284c7;
+                color: #ffffff;
+                text-decoration: none;
+                padding: 10px;
+                border-radius: 6px;
+                font-size: 0.85rem;
+                font-weight: bold;
+                flex: 1;
+                text-align: center;
+              "
+              >⚡ ធ្វើតេស្ត</a
+            >
           </div>
         </div>
 
         <!-- Card 3: Hardware -->
-        <div class="course-card">
-          <div class="card-icon">🖥️</div>
-          <div class="card-badge">Hardware</div>
-          <h3>គ្រឿងបន្លាស់ និងប្រព័ន្ធកុំព្យូទ័រ</h3>
-          <p>
-            ស្វែងយល់ពីសមាសភាគ CPU, RAM, Storage (SSD/HDD), Motherboard,
-            និងរបៀបថែទាំកុំព្យូទ័រ។
-          </p>
-          <div class="card-footer">
-            <a href="hardware.html" class="btn-link">📖 អានមេរៀន</a>
-            <a href="quiz.html" class="btn-quiz">✍️ ធ្វើតេស្ត</a>
+        <div
+          style="
+            background: #111827;
+            border: 1px solid #1f2937;
+            border-radius: 12px;
+            padding: 24px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+          "
+        >
+          <div>
+            <div style="font-size: 2.5rem; margin-bottom: 12px">🖥️</div>
+            <span
+              style="
+                background: rgba(56, 189, 248, 0.1);
+                color: #38bdf8;
+                font-size: 0.8rem;
+                font-weight: 600;
+                padding: 4px 10px;
+                border-radius: 20px;
+              "
+              >Hardware</span
+            >
+            <h3 style="color: #f8fafc; font-size: 1.3rem; margin: 12px 0 8px 0">
+              គ្រឿងបម្លាស់ និងប្រព័ន្ធកុំព្យូទ័រ
+            </h3>
+            <p
+              style="
+                color: #94a3b8;
+                font-size: 0.9rem;
+                line-height: 1.5;
+                margin-bottom: 20px;
+              "
+            >
+              ស្វែងយល់ពីសមាសភាគ CPU, RAM, Storage (SSD/HDD), Motherboard
+              និងរបៀបដោះស្រាយបញ្ហា។
+            </p>
+          </div>
+          <div style="display: flex; gap: 10px">
+            <a
+              href="hardware.html"
+              style="
+                background: #1f2937;
+                color: #ffffff;
+                text-decoration: none;
+                padding: 10px;
+                border-radius: 6px;
+                font-size: 0.85rem;
+                font-weight: bold;
+                flex: 1;
+                text-align: center;
+                border: 1px solid #374151;
+              "
+              >📖 អានមេរៀន</a
+            >
+            <a
+              href="quiz.html"
+              style="
+                background: #0284c7;
+                color: #ffffff;
+                text-decoration: none;
+                padding: 10px;
+                border-radius: 6px;
+                font-size: 0.85rem;
+                font-weight: bold;
+                flex: 1;
+                text-align: center;
+              "
+              >⚡ ធ្វើតេស្ត</a
+            >
           </div>
         </div>
       </div>
-    </main>
-    <script>
-function toggleDropdown(event) {
-    event.stopPropagation();
-    document.getElementById("myDropdown").classList.toggle("show");
-}
+    </section>
 
-// បិទ Dropdown វិញនៅពេលចុចលើកន្លែងផ្សេង
-window.onclick = function(event) {
-    if (!event.target.matches('.dropdown-btn')) {
-        var dropdowns = document.getElementsByClassName("dropdown-content");
-        for (var i = 0; i < dropdowns.length; i++) {
-            var openDropdown = dropdowns[i];
-            if (openDropdown.classList.contains('show')) {
-                openDropdown.classList.remove('show');
-            }
-        }
-    }
-}
-</script>
-
+    <!-- Footer -->
     <footer class="footer">
       <p>
         © 2026 IT & Networking Learning Hub | រក្សាសិទ្ធិគ្រប់យ៉ាងដោយ Run-Net
       </p>
     </footer>
 
+    <!-- JavaScript សម្រាប់ Dropdown -->
+    <script>
+      function toggleDropdown(event) {
+        event.preventDefault();
+        event.stopPropagation();
+        document.getElementById("myDropdown").classList.toggle("show");
+      }
+      window.onclick = function (event) {
+        if (!event.target.closest(".dropdown")) {
+          var dropdowns = document.getElementsByClassName("dropdown-content");
+          for (var i = 0; i < dropdowns.length; i++) {
+            var openDropdown = dropdowns[i];
+            if (openDropdown.classList.contains("show")) {
+              openDropdown.classList.remove("show");
+            }
+          }
+        }
+      };
+    </script>
     <script src="script.js"></script>
   </body>
 </html>
