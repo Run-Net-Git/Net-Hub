@@ -1266,3 +1266,14 @@ header.navbar {
   transform: translateY(-3px);
   box-shadow: 0 0 15px rgba(2, 132, 199, 0.5);
 }
+/* ពេលនៅ Dark Mode (デフォルト) */
+body {
+  --text-main: #f8fafc;
+  --text-desc: #94a3b8;
+}
+
+/* ពេលប្តូរទៅ Light Mode */
+body.light-mode {
+  --text-main: #1e293b; /* ពណ៌អក្សរដិតងងឹតសម្រាប់พื้นหลังស */
+  --text-desc: #475569;
+}
