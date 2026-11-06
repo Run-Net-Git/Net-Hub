@@ -1347,3 +1347,67 @@ body {
     font-size: 0.95rem !important;
   }
 }
+/* ការពារមិនឱ្យអូសហៀរផ្ដេក និងធានាថា Width គ្រប់គ្រងបានល្អ */
+html,
+body {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+/* សម្រាប់អេក្រង់ទូរស័ព្ទដៃទាំងអស់ (Tablet និង Mobile ក្រោម 768px) */
+@media screen and (max-width: 768px) {
+  /* ១. កែសម្រួល Container មិនឱ្យបុកគែមទូរស័ព្ទ */
+  .container,
+  main {
+    padding: 10px 15px !important;
+    width: 100% !important;
+  }
+
+  /* ២. កែសម្រួល Navigation Menu ខាងលើមិនឱ្យកកិតគ្នា */
+  nav,
+  .navbar {
+    flex-direction: column !important;
+    align-items: center !important;
+    gap: 10px !important;
+    padding: 12px !important;
+  }
+
+  .nav-links {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 8px !important;
+  }
+
+  /* ៣. កែសម្រួល Hardware Card ឱ្យរៀបចំខ្លួនបានល្អលើទូរស័ព្ទ */
+  .hardware-card {
+    display: flex !important;
+    flex-direction: column-reverse !important; /* ឱ្យអត្ថបទនៅក្រោម រូបនៅលើ */
+    width: 100% !important;
+    padding: 16px !important;
+    margin: 15px 0 !important;
+    gap: 15px !important;
+  }
+
+  /* ឱ្យផ្នែកអត្ថបទ និងរូបភាពក្នុង Card ពេញទទឹង 100% ទាំងអស់ */
+  .hardware-card > div {
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+
+  .hardware-card img {
+    width: 100% !important;
+    height: auto !important;
+    object-fit: cover;
+    border-radius: 8px;
+  }
+}
