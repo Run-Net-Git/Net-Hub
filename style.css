@@ -1277,3 +1277,28 @@ body.light-mode {
   --text-main: #1e293b; /* ពណ៌អក្សរដិតងងឹតសម្រាប់พื้นหลังស */
   --text-desc: #475569;
 }
+/* Custom Responsive Rules សម្រាប់ទូរស័ព្ទដៃ និងអេក្រង់តូច */
+@media (max-width: 768px) {
+  /* ពេលមើលលើទូរស័ព្ទ តម្រៀបអត្ថបទ និងរូបភាពពីលើចុះក្រោមវិញ */
+  .hardware-card {
+    flex-direction: column-reverse !important;
+    text-align: left;
+    padding: 16px !important;
+    gap: 20px !important;
+  }
+
+  /* កំណត់ទំហំរូបភាពឱ្យពេញទទឹងអេក្រង់ទូរស័ព្ទ */
+  .hardware-card > div {
+    max-width: 100% !important;
+    width: 100% !important;
+  }
+
+  /* តម្រឹមទំហំអក្សរចំណងជើងឱ្យសមស្របនឹងអេក្រង់តូច */
+  .container h1 {
+    font-size: 1.5rem !important;
+  }
+
+  .container h2 {
+    font-size: 1.2rem !important;
+  }
+}
