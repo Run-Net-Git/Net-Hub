@@ -1411,3 +1411,33 @@ body {
     border-radius: 8px;
   }
 }
+/* សម្រាប់អេក្រង់ទូរស័ព្ទដៃទាំងអស់ (Mobile & Tablet) */
+@media screen and (max-width: 768px) {
+  /* ធានាថា Hardware Card ប្ដូរទៅជាទម្រង់បញ្ឈរ (អត្ថបទលើ រូបក្រោម ឬរូបលើ អត្ថបទក្រោម) */
+  .hardware-card {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    width: 100% !important;
+    padding: 16px !important;
+    margin: 15px 0 !important;
+    box-sizing: border-box;
+  }
+
+  /* គ្រប់គ្រងទំហំ Div ខាងក្នុង Card មិនឱ្យហៀរចេញក្រៅ */
+  .hardware-card > div {
+    width: 100% !important;
+    max-width: 100% !important;
+    padding: 0 !important;
+  }
+
+  /* គ្រប់គ្រងទំហំរូបភាពទាំងអស់ក្នុង Card ឱ្យរីកតូចល្មមតាមអេក្រង់ទូរស័ព្ទ មិនឱ្យត្រួតស៊ីអក្សរ */
+  .hardware-card img {
+    width: 100% !important;
+    max-width: 100% !important;
+    height: auto !important;
+    object-fit: contain;
+    border-radius: 8px;
+    margin-top: 10px;
+  }
+}
