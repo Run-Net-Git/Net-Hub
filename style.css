@@ -1302,3 +1302,48 @@ body.light-mode {
     font-size: 1.2rem !important;
   }
 }
+/* ការពារមិនឱ្យមាន Screen លៀនទៅខាងស្ដាំលើ Mobile */
+html,
+body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+/* សម្រាប់អេក្រង់ទូរស័ព្ទ (Tablet & Mobile Portrait) */
+@media (max-width: 768px) {
+  /* រៀបចំ Navigation Bar ឱ្យតម្រៀបតាមជួរឈរ */
+  nav,
+  .navbar,
+  header {
+    flex-direction: column !important;
+    gap: 12px !important;
+    padding: 10px !important;
+    text-align: center;
+  }
+
+  /* តម្រៀប menu-links ឱ្យនៅចំកណ្ដាល និងមិនកកិតគ្នា */
+  .nav-links,
+  .menu {
+    flex-wrap: wrap !important;
+    justify-content: center !important;
+    gap: 8px !important;
+  }
+
+  /* តម្រៀប Card មេរៀន (Networking, Web Dev, Hardware) ឱ្យធ្លាក់មកក្រោម (១ជួរ១) */
+  .cards-container,
+  .grid,
+  .category-cards {
+    flex-direction: column !important;
+    grid-template-columns: 1fr !important;
+    width: 100% !important;
+  }
+
+  /* តម្រឹមទំហំអក្សរ Header ឱ្យសមនឹងទូរស័ព្ទ */
+  h1 {
+    font-size: 1.8rem !important;
+  }
+
+  p {
+    font-size: 0.95rem !important;
+  }
+}
