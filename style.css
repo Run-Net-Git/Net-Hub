@@ -1411,33 +1411,47 @@ body {
     border-radius: 8px;
   }
 }
-/* សម្រាប់អេក្រង់ទូរស័ព្ទដៃទាំងអស់ (Mobile & Tablet) */
+/* ការពារមិនឱ្យមាន Screen លៀនទៅខាងស្ដាំ និងរៀបចំ Responsive លើ Mobile */
+html,
+body {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  box-sizing: border-box;
+}
+
 @media screen and (max-width: 768px) {
-  /* ធានាថា Hardware Card ប្ដូរទៅជាទម្រង់បញ្ឈរ (អត្ថបទលើ រូបក្រោម ឬរូបលើ អត្ថបទក្រោម) */
-  .hardware-card {
-    display: flex !important;
-    flex-direction: column !important;
-    align-items: center !important;
+  .container,
+  main {
+    padding: 10px 15px !important;
     width: 100% !important;
-    padding: 16px !important;
-    margin: 15px 0 !important;
     box-sizing: border-box;
   }
 
-  /* គ្រប់គ្រងទំហំ Div ខាងក្នុង Card មិនឱ្យហៀរចេញក្រៅ */
+  /* បង្ខំឱ្យរាល់ Hardware Card ប្ដូរទៅជាទម្រង់បញ្ឈរលើទូរស័ព្ទ */
+  .hardware-card {
+    display: flex !important;
+    flex-direction: column-reverse !important; /* រូបនៅក្រោម អត្ថបទនៅលើ */
+    width: 100% !important;
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+    padding: 16px !important;
+    margin: 15px 0 !important;
+    gap: 15px !important;
+  }
+
   .hardware-card > div {
     width: 100% !important;
     max-width: 100% !important;
-    padding: 0 !important;
+    flex: unset !important;
   }
 
-  /* គ្រប់គ្រងទំហំរូបភាពទាំងអស់ក្នុង Card ឱ្យរីកតូចល្មមតាមអេក្រង់ទូរស័ព្ទ មិនឱ្យត្រួតស៊ីអក្សរ */
   .hardware-card img {
     width: 100% !important;
     max-width: 100% !important;
     height: auto !important;
-    object-fit: contain;
+    object-fit: contain !important;
     border-radius: 8px;
-    margin-top: 10px;
   }
 }
